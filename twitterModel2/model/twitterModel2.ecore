@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="twitterModel2" nsURI="http://www.example.org/twitterModel2"
+    nsPrefix="twitterModel2">
+  <eClassifiers xsi:type="ecore:EClass" name="Program">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Block">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseBlock" eType="#//Block"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifBlock" lowerBound="1"
+        eType="#//Block"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+        eType="#//ExpBool"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpUnaire" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="command" eType="#//Command"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinaire" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" lowerBound="1" upperBound="-1"
+        eType="#//Args"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Args">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arg" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Const" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBool" eSuperTypes="#//ExpBinaire">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="2"
+        upperBound="2" eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opBool" lowerBound="1"
+        eType="#//opBool"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Affectation" eSuperTypes="#//ExpBinaire">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opDroite" eType="#//Expression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameVariable" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="opBool" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//opBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//opBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//opBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_user" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_location" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_entity" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_date" eSuperTypes="#//Command"/>
+</ecore:EPackage>
