@@ -59,4 +59,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="ProportionNegatif" eSuperTypes="#//CommandStat"/>
   <eClassifiers xsi:type="ecore:EClass" name="countTweet" eSuperTypes="#//CommandStat"/>
   <eClassifiers xsi:type="ecore:EClass" name="countVisitProfil" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CroissanceAbonne" eSuperTypes="#//CommandStat"/>
 </ecore:EPackage>

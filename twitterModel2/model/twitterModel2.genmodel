@@ -55,5 +55,6 @@
     <genClasses ecoreClass="twitterModel2.ecore#//ProportionNegatif"/>
     <genClasses ecoreClass="twitterModel2.ecore#//countTweet"/>
     <genClasses ecoreClass="twitterModel2.ecore#//countVisitProfil"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//CroissanceAbonne"/>
   </genPackages>
 </genmodel:GenModel>
