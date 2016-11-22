@@ -62,5 +62,6 @@
     <genClasses ecoreClass="twitterModel2.ecore#//Greater"/>
     <genClasses ecoreClass="twitterModel2.ecore#//Less"/>
     <genClasses ecoreClass="twitterModel2.ecore#//Equals"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//SupEgal"/>
   </genPackages>
 </genmodel:GenModel>

@@ -6,7 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
         eType="#//Statement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Block" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
         eType="#//Statement" containment="true"/>
@@ -18,11 +18,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
         eType="#//ExpBool"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExpUnaire" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="command" eType="#//Command"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpBinaire" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinaire" abstract="true" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" lowerBound="1" upperBound="-1"
         eType="#//Args"/>
@@ -67,4 +67,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="Greater" eSuperTypes="#//opBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Less" eSuperTypes="#//opBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Equals" eSuperTypes="#//opBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SupEgal" eSuperTypes="#//opBool"/>
 </ecore:EPackage>
