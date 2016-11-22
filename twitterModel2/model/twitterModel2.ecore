@@ -7,7 +7,7 @@
         eType="#//Statement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Block">
+  <eClassifiers xsi:type="ecore:EClass" name="Block" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
         eType="#//Statement" containment="true"/>
   </eClassifiers>
@@ -32,10 +32,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Const" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExpBool" eSuperTypes="#//ExpBinaire">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="2"
-        upperBound="2" eType="#//Expression" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="opBool" lowerBound="1"
         eType="#//opBool"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressionG" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressionD" lowerBound="1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Affectation" eSuperTypes="#//ExpBinaire">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
@@ -60,4 +62,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="countTweet" eSuperTypes="#//CommandStat"/>
   <eClassifiers xsi:type="ecore:EClass" name="countVisitProfil" eSuperTypes="#//CommandStat"/>
   <eClassifiers xsi:type="ecore:EClass" name="CroissanceAbonne" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="moyFollowers" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="moyFavorited" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Greater" eSuperTypes="#//opBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Less" eSuperTypes="#//opBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Equals" eSuperTypes="#//opBool"/>
 </ecore:EPackage>

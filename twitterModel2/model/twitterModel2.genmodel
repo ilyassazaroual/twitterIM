@@ -31,8 +31,9 @@
     </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//Const"/>
     <genClasses ecoreClass="twitterModel2.ecore#//ExpBool">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//ExpBool/expression"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//ExpBool/opBool"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//ExpBool/expressionG"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//ExpBool/expressionD"/>
     </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//Affectation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Affectation/variable"/>
@@ -56,5 +57,10 @@
     <genClasses ecoreClass="twitterModel2.ecore#//countTweet"/>
     <genClasses ecoreClass="twitterModel2.ecore#//countVisitProfil"/>
     <genClasses ecoreClass="twitterModel2.ecore#//CroissanceAbonne"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//moyFollowers"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//moyFavorited"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//Greater"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//Less"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//Equals"/>
   </genPackages>
 </genmodel:GenModel>
