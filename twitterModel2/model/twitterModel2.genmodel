@@ -49,5 +49,11 @@
     <genClasses ecoreClass="twitterModel2.ecore#//tweets_location"/>
     <genClasses ecoreClass="twitterModel2.ecore#//tweets_entity"/>
     <genClasses ecoreClass="twitterModel2.ecore#//tweets_date"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//CommandStat"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//CommandTwitter"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//ProportionPositif"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//ProportionNegatif"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//countTweet"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//countVisitProfil"/>
   </genPackages>
 </genmodel:GenModel>

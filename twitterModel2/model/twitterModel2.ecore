@@ -49,8 +49,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//opBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//opBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//opBool"/>
-  <eClassifiers xsi:type="ecore:EClass" name="tweets_user" eSuperTypes="#//Command"/>
-  <eClassifiers xsi:type="ecore:EClass" name="tweets_location" eSuperTypes="#//Command"/>
-  <eClassifiers xsi:type="ecore:EClass" name="tweets_entity" eSuperTypes="#//Command"/>
-  <eClassifiers xsi:type="ecore:EClass" name="tweets_date" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_user" eSuperTypes="#//CommandTwitter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_location" eSuperTypes="#//CommandTwitter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_entity" eSuperTypes="#//CommandTwitter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tweets_date" eSuperTypes="#//CommandTwitter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommandStat" abstract="true" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommandTwitter" abstract="true" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProportionPositif" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProportionNegatif" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="countTweet" eSuperTypes="#//CommandStat"/>
+  <eClassifiers xsi:type="ecore:EClass" name="countVisitProfil" eSuperTypes="#//CommandStat"/>
 </ecore:EPackage>
