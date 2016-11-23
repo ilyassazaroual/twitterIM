@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated twitterModel2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="twitterModel2.presentation.TwitterModel2ModelWizardID"
+            name="%_UI_TwitterModel2ModelWizard_label"
+            class="twitterModel2.presentation.TwitterModel2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TwitterModel2ModelFile.gif">
+         <description>%_UI_TwitterModel2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated twitterModel2 -->
+      <editor
+            id="twitterModel2.presentation.TwitterModel2EditorID"
+            name="%_UI_TwitterModel2Editor_label"
+            icon="icons/full/obj16/TwitterModel2ModelFile.gif"
+            extensions="twittermodel2"
+            class="twitterModel2.presentation.TwitterModel2Editor"
+            contributorClass="twitterModel2.presentation.TwitterModel2ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
