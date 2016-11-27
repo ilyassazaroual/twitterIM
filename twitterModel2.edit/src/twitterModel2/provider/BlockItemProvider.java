@@ -146,22 +146,102 @@ public class BlockItemProvider extends StatementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createExpUnaire()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
 				 TwitterModel2Factory.eINSTANCE.createConst()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createExpBool()));
+				 TwitterModel2Factory.eINSTANCE.createAffectation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createAffectation()));
+				 TwitterModel2Factory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createXor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createtweets_user()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createtweets_location()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createtweets_entity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createtweets_date()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createProportionPositif()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createProportionNegatif()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createcountTweet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createcountVisitProfil()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createCroissanceAbonne()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createmoyFollowers()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createmoyFavorited()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createGreater()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createLess()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createEqual()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createSupEgal()));
 	}
 
 }

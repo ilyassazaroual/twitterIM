@@ -2,8 +2,6 @@
  */
 package twitterModel2.tests;
 
-import junit.framework.TestCase;
-
 import twitterModel2.Command;
 
 /**
@@ -12,15 +10,7 @@ import twitterModel2.Command;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class CommandTest extends TestCase {
-
-	/**
-	 * The fixture for this Command test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Command fixture = null;
+public abstract class CommandTest extends ExpressionTest {
 
 	/**
 	 * Constructs a new Command test case with the given name.
@@ -33,23 +23,14 @@ public abstract class CommandTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Command test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Command fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Command test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Command getFixture() {
-		return fixture;
+		return (Command)fixture;
 	}
 
 } //CommandTest

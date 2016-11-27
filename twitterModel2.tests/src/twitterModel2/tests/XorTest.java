@@ -13,7 +13,7 @@ import twitterModel2.Xor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class XorTest extends opBoolTest {
+public class XorTest extends OpBoolTest {
 
 	/**
 	 * <!-- begin-user-doc -->

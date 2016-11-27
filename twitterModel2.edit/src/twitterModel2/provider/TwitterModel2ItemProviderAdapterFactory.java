@@ -141,29 +141,6 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.ExpUnaire} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExpUnaireItemProvider expUnaireItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.ExpUnaire}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExpUnaireAdapter() {
-		if (expUnaireItemProvider == null) {
-			expUnaireItemProvider = new ExpUnaireItemProvider(this);
-		}
-
-		return expUnaireItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link twitterModel2.Args} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -207,29 +184,6 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		}
 
 		return constItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.ExpBool} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExpBoolItemProvider expBoolItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.ExpBool}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExpBoolAdapter() {
-		if (expBoolItemProvider == null) {
-			expBoolItemProvider = new ExpBoolItemProvider(this);
-		}
-
-		return expBoolItemProvider;
 	}
 
 	/**
@@ -647,26 +601,49 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Equals} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.Equal} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EqualsItemProvider equalsItemProvider;
+	protected EqualItemProvider equalItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.Equals}.
+	 * This creates an adapter for a {@link twitterModel2.Equal}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEqualsAdapter() {
-		if (equalsItemProvider == null) {
-			equalsItemProvider = new EqualsItemProvider(this);
+	public Adapter createEqualAdapter() {
+		if (equalItemProvider == null) {
+			equalItemProvider = new EqualItemProvider(this);
 		}
 
-		return equalsItemProvider;
+		return equalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link twitterModel2.SupEgal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SupEgalItemProvider supEgalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link twitterModel2.SupEgal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSupEgalAdapter() {
+		if (supEgalItemProvider == null) {
+			supEgalItemProvider = new SupEgalItemProvider(this);
+		}
+
+		return supEgalItemProvider;
 	}
 
 	/**
@@ -771,10 +748,8 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (programItemProvider != null) programItemProvider.dispose();
 		if (blockItemProvider != null) blockItemProvider.dispose();
 		if (ifItemProvider != null) ifItemProvider.dispose();
-		if (expUnaireItemProvider != null) expUnaireItemProvider.dispose();
 		if (argsItemProvider != null) argsItemProvider.dispose();
 		if (constItemProvider != null) constItemProvider.dispose();
-		if (expBoolItemProvider != null) expBoolItemProvider.dispose();
 		if (affectationItemProvider != null) affectationItemProvider.dispose();
 		if (variableItemProvider != null) variableItemProvider.dispose();
 		if (andItemProvider != null) andItemProvider.dispose();
@@ -793,7 +768,8 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (moyFavoritedItemProvider != null) moyFavoritedItemProvider.dispose();
 		if (greaterItemProvider != null) greaterItemProvider.dispose();
 		if (lessItemProvider != null) lessItemProvider.dispose();
-		if (equalsItemProvider != null) equalsItemProvider.dispose();
+		if (equalItemProvider != null) equalItemProvider.dispose();
+		if (supEgalItemProvider != null) supEgalItemProvider.dispose();
 	}
 
 }

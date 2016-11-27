@@ -1,3 +1,57 @@
-t1 : tweets_user ali #france @fillon 
-propPositif t1 
- 
+Program
+{
+	statement 
+	{
+		
+		// moy = moyFollowers #Rennes #Nantes
+		Affectation
+		{
+			variable Variable
+			{
+				nameVariable"moy"
+			}
+			opDroite moyFollowers 
+			{
+				args 
+				{
+					Args
+					{
+						arg"#Rennes"
+					},
+					Args
+					{
+						arg"#Nantes"
+					}
+				}
+			}
+		},
+		
+		
+		// propNeg = ProportionNegatif @Ali #France @Fillon
+		Affectation
+		{
+			variable Variable
+			{
+				nameVariable"rezre"
+			}
+			opDroite ProportionNegatif 
+			{
+				args 
+				{
+					Args
+					{
+						arg "@Ali"
+					},
+					Args
+					{
+						arg "#France"
+					},
+					Args
+					{ 
+						arg "@Fillon"
+					}
+				}
+			}
+		}
+	}
+}

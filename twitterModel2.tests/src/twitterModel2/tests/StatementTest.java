@@ -3,6 +3,7 @@
 package twitterModel2.tests;
 
 import junit.framework.TestCase;
+
 import twitterModel2.Statement;
 
 /**

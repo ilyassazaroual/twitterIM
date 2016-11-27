@@ -13,7 +13,7 @@ import twitterModel2.TwitterModel2Factory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AndTest extends opBoolTest {
+public class AndTest extends OpBoolTest {
 
 	/**
 	 * <!-- begin-user-doc -->
