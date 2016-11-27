@@ -52,6 +52,75 @@ Program
 					}
 				}
 			}
+		},
+		
+		// if(condition) ifBlock else elseBlck
+		If
+		{
+			elseBlock 
+				Block   
+				{ 
+					statement 
+					{
+						 CroissanceAbonne
+						 {
+						 	
+						 }
+					}
+				} 
+			ifBlock 
+				Block 
+				{ 
+					statement 
+					{
+						 CroissanceAbonne
+						 {
+						 	
+						 }
+					}
+					
+				} 
+			condition SupEgal 
+			{
+				expressionG moyFollowers 
+				{
+					args 
+					{
+						Args
+						{
+							arg "@Ali"
+						},
+						Args
+						{
+							arg "#France"
+						},
+						Args
+						{ 
+							arg "@Fillon"
+						}
+					}
+				 
+					
+				} 
+				expressionD moyFollowers 
+				{
+					args 
+					{
+						Args
+						{
+							arg "@Ali"
+						},
+						Args
+						{
+							arg "#France"
+						},
+						Args
+						{ 
+							arg "@Fillon"
+						}
+					}
+				}
+			} 
 		}
 	}
 }
