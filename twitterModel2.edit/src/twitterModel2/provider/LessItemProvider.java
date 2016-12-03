@@ -14,19 +14,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import twitterModel2.TwitterModel2Package;
 
 /**
- * This is the item provider adapter for a {@link twitterModel2.Less} object.
+ * This is the item provider adapter for a {@link twitterModel2.LESS} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LessItemProvider extends OpBoolItemProvider {
+public class LESSItemProvider extends OpBoolItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LessItemProvider(AdapterFactory adapterFactory) {
+	public LESSItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +46,14 @@ public class LessItemProvider extends OpBoolItemProvider {
 	}
 
 	/**
-	 * This returns Less.gif.
+	 * This returns LESS.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Less"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LESS"));
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class LessItemProvider extends OpBoolItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Less_type");
+		return getString("_UI_LESS_type");
 	}
 	
 

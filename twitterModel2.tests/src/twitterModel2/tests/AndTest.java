@@ -4,16 +4,16 @@ package twitterModel2.tests;
 
 import junit.textui.TestRunner;
 
-import twitterModel2.And;
+import twitterModel2.AND;
 import twitterModel2.TwitterModel2Factory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>And</b></em>'.
+ * A test case for the model object '<em><b>AND</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class AndTest extends OpBoolTest {
+public class ANDTest extends OpBoolTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class AndTest extends OpBoolTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(AndTest.class);
+		TestRunner.run(ANDTest.class);
 	}
 
 	/**
-	 * Constructs a new And test case with the given name.
+	 * Constructs a new AND test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AndTest(String name) {
+	public ANDTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this And test case.
+	 * Returns the fixture for this AND test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected And getFixture() {
-		return (And)fixture;
+	protected AND getFixture() {
+		return (AND)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class AndTest extends OpBoolTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TwitterModel2Factory.eINSTANCE.createAnd());
+		setFixture(TwitterModel2Factory.eINSTANCE.createAND());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class AndTest extends OpBoolTest {
 		setFixture(null);
 	}
 
-} //AndTest
+} //ANDTest

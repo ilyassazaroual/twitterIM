@@ -4,16 +4,16 @@ package twitterModel2.tests;
 
 import junit.textui.TestRunner;
 
-import twitterModel2.Greater;
+import twitterModel2.GREATER;
 import twitterModel2.TwitterModel2Factory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Greater</b></em>'.
+ * A test case for the model object '<em><b>GREATER</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class GreaterTest extends OpBoolTest {
+public class GREATERTest extends OpBoolTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class GreaterTest extends OpBoolTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(GreaterTest.class);
+		TestRunner.run(GREATERTest.class);
 	}
 
 	/**
-	 * Constructs a new Greater test case with the given name.
+	 * Constructs a new GREATER test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GreaterTest(String name) {
+	public GREATERTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Greater test case.
+	 * Returns the fixture for this GREATER test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected Greater getFixture() {
-		return (Greater)fixture;
+	protected GREATER getFixture() {
+		return (GREATER)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class GreaterTest extends OpBoolTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TwitterModel2Factory.eINSTANCE.createGreater());
+		setFixture(TwitterModel2Factory.eINSTANCE.createGREATER());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class GreaterTest extends OpBoolTest {
 		setFixture(null);
 	}
 
-} //GreaterTest
+} //GREATERTest

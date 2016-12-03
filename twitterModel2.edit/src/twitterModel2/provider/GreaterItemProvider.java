@@ -14,19 +14,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import twitterModel2.TwitterModel2Package;
 
 /**
- * This is the item provider adapter for a {@link twitterModel2.Greater} object.
+ * This is the item provider adapter for a {@link twitterModel2.GREATER} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class GreaterItemProvider extends OpBoolItemProvider {
+public class GREATERItemProvider extends OpBoolItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GreaterItemProvider(AdapterFactory adapterFactory) {
+	public GREATERItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +46,14 @@ public class GreaterItemProvider extends OpBoolItemProvider {
 	}
 
 	/**
-	 * This returns Greater.gif.
+	 * This returns GREATER.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Greater"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/GREATER"));
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class GreaterItemProvider extends OpBoolItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Greater_type");
+		return getString("_UI_GREATER_type");
 	}
 	
 

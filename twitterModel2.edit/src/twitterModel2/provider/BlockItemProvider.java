@@ -151,17 +151,12 @@ public class BlockItemProvider extends StatementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createAnd()));
+				 TwitterModel2Factory.eINSTANCE.createAND()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createOr()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createXor()));
+				 TwitterModel2Factory.eINSTANCE.createOR()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -221,22 +216,17 @@ public class BlockItemProvider extends StatementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createGreater()));
+				 TwitterModel2Factory.eINSTANCE.createGREATER()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createLess()));
+				 TwitterModel2Factory.eINSTANCE.createLESS()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createEqual()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createSupEgal()));
+				 TwitterModel2Factory.eINSTANCE.createEQUALS()));
 
 		newChildDescriptors.add
 			(createChildParameter

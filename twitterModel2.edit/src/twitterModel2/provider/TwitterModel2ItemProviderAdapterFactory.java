@@ -187,72 +187,49 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.And} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.AND} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AndItemProvider andItemProvider;
+	protected ANDItemProvider andItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.And}.
+	 * This creates an adapter for a {@link twitterModel2.AND}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAndAdapter() {
+	public Adapter createANDAdapter() {
 		if (andItemProvider == null) {
-			andItemProvider = new AndItemProvider(this);
+			andItemProvider = new ANDItemProvider(this);
 		}
 
 		return andItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Or} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.OR} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OrItemProvider orItemProvider;
+	protected ORItemProvider orItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.Or}.
+	 * This creates an adapter for a {@link twitterModel2.OR}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOrAdapter() {
+	public Adapter createORAdapter() {
 		if (orItemProvider == null) {
-			orItemProvider = new OrItemProvider(this);
+			orItemProvider = new ORItemProvider(this);
 		}
 
 		return orItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Xor} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected XorItemProvider xorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.Xor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createXorAdapter() {
-		if (xorItemProvider == null) {
-			xorItemProvider = new XorItemProvider(this);
-		}
-
-		return xorItemProvider;
 	}
 
 	/**
@@ -509,95 +486,72 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Greater} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.GREATER} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GreaterItemProvider greaterItemProvider;
+	protected GREATERItemProvider greaterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.Greater}.
+	 * This creates an adapter for a {@link twitterModel2.GREATER}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createGreaterAdapter() {
+	public Adapter createGREATERAdapter() {
 		if (greaterItemProvider == null) {
-			greaterItemProvider = new GreaterItemProvider(this);
+			greaterItemProvider = new GREATERItemProvider(this);
 		}
 
 		return greaterItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Less} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.LESS} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LessItemProvider lessItemProvider;
+	protected LESSItemProvider lessItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.Less}.
+	 * This creates an adapter for a {@link twitterModel2.LESS}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLessAdapter() {
+	public Adapter createLESSAdapter() {
 		if (lessItemProvider == null) {
-			lessItemProvider = new LessItemProvider(this);
+			lessItemProvider = new LESSItemProvider(this);
 		}
 
 		return lessItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Equal} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.EQUALS} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EqualItemProvider equalItemProvider;
+	protected EQUALSItemProvider equalsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.Equal}.
+	 * This creates an adapter for a {@link twitterModel2.EQUALS}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEqualAdapter() {
-		if (equalItemProvider == null) {
-			equalItemProvider = new EqualItemProvider(this);
+	public Adapter createEQUALSAdapter() {
+		if (equalsItemProvider == null) {
+			equalsItemProvider = new EQUALSItemProvider(this);
 		}
 
-		return equalItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.SupEgal} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SupEgalItemProvider supEgalItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.SupEgal}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSupEgalAdapter() {
-		if (supEgalItemProvider == null) {
-			supEgalItemProvider = new SupEgalItemProvider(this);
-		}
-
-		return supEgalItemProvider;
+		return equalsItemProvider;
 	}
 
 	/**
@@ -821,7 +775,6 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (declarationVarItemProvider != null) declarationVarItemProvider.dispose();
 		if (andItemProvider != null) andItemProvider.dispose();
 		if (orItemProvider != null) orItemProvider.dispose();
-		if (xorItemProvider != null) xorItemProvider.dispose();
 		if (tweets_userItemProvider != null) tweets_userItemProvider.dispose();
 		if (tweets_locationItemProvider != null) tweets_locationItemProvider.dispose();
 		if (tweets_entityItemProvider != null) tweets_entityItemProvider.dispose();
@@ -835,8 +788,7 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (moyFavoritedItemProvider != null) moyFavoritedItemProvider.dispose();
 		if (greaterItemProvider != null) greaterItemProvider.dispose();
 		if (lessItemProvider != null) lessItemProvider.dispose();
-		if (equalItemProvider != null) equalItemProvider.dispose();
-		if (supEgalItemProvider != null) supEgalItemProvider.dispose();
+		if (equalsItemProvider != null) equalsItemProvider.dispose();
 		if (utilisationVarItemProvider != null) utilisationVarItemProvider.dispose();
 		if (printItemProvider != null) printItemProvider.dispose();
 		if (stringTwItemProvider != null) stringTwItemProvider.dispose();

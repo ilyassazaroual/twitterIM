@@ -14,19 +14,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import twitterModel2.TwitterModel2Package;
 
 /**
- * This is the item provider adapter for a {@link twitterModel2.Or} object.
+ * This is the item provider adapter for a {@link twitterModel2.OR} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OrItemProvider extends OpBoolItemProvider {
+public class ORItemProvider extends OpBoolItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrItemProvider(AdapterFactory adapterFactory) {
+	public ORItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +46,14 @@ public class OrItemProvider extends OpBoolItemProvider {
 	}
 
 	/**
-	 * This returns Or.gif.
+	 * This returns OR.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Or"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/OR"));
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class OrItemProvider extends OpBoolItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Or_type");
+		return getString("_UI_OR_type");
 	}
 	
 

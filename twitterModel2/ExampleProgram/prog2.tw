@@ -1,23 +1,27 @@
 Program
 {
-		print  (tweets_user{"Ali","#France"});
+		print (tweets_user{"Ali","#France"});
 		
 		t1 := ProportionPositif {"Youssouf", "#France"};
-		t1 := "czrefze";
 		print(t1);	
 			
-		t2 := "Ali";
-		
-		t1 := t2;
+		t2 := ProportionPositif {"Ali", "#France"};
 		
 		cptAli := countVisitProfil {t2};
 		
-		If(Greater(t1,t2) )
+				
+		If(GREATER(t1,t2))
 		{
 			t3 := "Youssouf";
 			t3 := "Youssouf";
-			t3 := "Youssouf";
-			print ("first is greater than second");
-			t3 := "Youssouf"
-		}	
+			print ("Youssouf est plus gentil avec la France")
+		}else
+		{
+			print ("Ali est plus gentil avec la France")
+		};
+		
+		If(LESS(t1,ProportionNegatif{"Youssouf","#France"}))
+		{
+			print("Youssouf a plus de tweets positif que neg sur la France ")
+		}
 }

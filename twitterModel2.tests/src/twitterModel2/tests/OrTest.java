@@ -4,16 +4,16 @@ package twitterModel2.tests;
 
 import junit.textui.TestRunner;
 
-import twitterModel2.Or;
+import twitterModel2.OR;
 import twitterModel2.TwitterModel2Factory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Or</b></em>'.
+ * A test case for the model object '<em><b>OR</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class OrTest extends OpBoolTest {
+public class ORTest extends OpBoolTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class OrTest extends OpBoolTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(OrTest.class);
+		TestRunner.run(ORTest.class);
 	}
 
 	/**
-	 * Constructs a new Or test case with the given name.
+	 * Constructs a new OR test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrTest(String name) {
+	public ORTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Or test case.
+	 * Returns the fixture for this OR test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected Or getFixture() {
-		return (Or)fixture;
+	protected OR getFixture() {
+		return (OR)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class OrTest extends OpBoolTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TwitterModel2Factory.eINSTANCE.createOr());
+		setFixture(TwitterModel2Factory.eINSTANCE.createOR());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class OrTest extends OpBoolTest {
 		setFixture(null);
 	}
 
-} //OrTest
+} //ORTest
