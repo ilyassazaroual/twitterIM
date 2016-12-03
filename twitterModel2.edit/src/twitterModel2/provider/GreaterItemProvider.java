@@ -105,8 +105,8 @@ public class GreaterItemProvider extends OpBoolItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TwitterModel2Package.Literals.OP_BOOL__EXPRESSION_G ||
-			childFeature == TwitterModel2Package.Literals.OP_BOOL__EXPRESSION_D;
+			childFeature == TwitterModel2Package.Literals.EXP_BINAIRE__EXP1 ||
+			childFeature == TwitterModel2Package.Literals.EXP_BINAIRE__EXP2;
 
 		if (qualify) {
 			return getString

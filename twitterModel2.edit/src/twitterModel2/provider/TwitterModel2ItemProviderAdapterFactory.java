@@ -164,72 +164,26 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Const} instances.
+	 * This keeps track of the one adapter used for all {@link twitterModel2.DeclarationVar} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstItemProvider constItemProvider;
+	protected DeclarationVarItemProvider declarationVarItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link twitterModel2.Const}.
+	 * This creates an adapter for a {@link twitterModel2.DeclarationVar}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConstAdapter() {
-		if (constItemProvider == null) {
-			constItemProvider = new ConstItemProvider(this);
+	public Adapter createDeclarationVarAdapter() {
+		if (declarationVarItemProvider == null) {
+			declarationVarItemProvider = new DeclarationVarItemProvider(this);
 		}
 
-		return constItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Affectation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AffectationItemProvider affectationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.Affectation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAffectationAdapter() {
-		if (affectationItemProvider == null) {
-			affectationItemProvider = new AffectationItemProvider(this);
-		}
-
-		return affectationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Variable} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VariableItemProvider variableItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.Variable}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVariableAdapter() {
-		if (variableItemProvider == null) {
-			variableItemProvider = new VariableItemProvider(this);
-		}
-
-		return variableItemProvider;
+		return declarationVarItemProvider;
 	}
 
 	/**
@@ -647,6 +601,121 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link twitterModel2.UtilisationVar} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UtilisationVarItemProvider utilisationVarItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link twitterModel2.UtilisationVar}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUtilisationVarAdapter() {
+		if (utilisationVarItemProvider == null) {
+			utilisationVarItemProvider = new UtilisationVarItemProvider(this);
+		}
+
+		return utilisationVarItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link twitterModel2.print} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected printItemProvider printItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link twitterModel2.print}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createprintAdapter() {
+		if (printItemProvider == null) {
+			printItemProvider = new printItemProvider(this);
+		}
+
+		return printItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link twitterModel2.StringTw} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringTwItemProvider stringTwItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link twitterModel2.StringTw}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringTwAdapter() {
+		if (stringTwItemProvider == null) {
+			stringTwItemProvider = new StringTwItemProvider(this);
+		}
+
+		return stringTwItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link twitterModel2.ADD} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ADDItemProvider addItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link twitterModel2.ADD}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createADDAdapter() {
+		if (addItemProvider == null) {
+			addItemProvider = new ADDItemProvider(this);
+		}
+
+		return addItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link twitterModel2.MUL} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MULItemProvider mulItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link twitterModel2.MUL}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMULAdapter() {
+		if (mulItemProvider == null) {
+			mulItemProvider = new MULItemProvider(this);
+		}
+
+		return mulItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -749,9 +818,7 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (blockItemProvider != null) blockItemProvider.dispose();
 		if (ifItemProvider != null) ifItemProvider.dispose();
 		if (argsItemProvider != null) argsItemProvider.dispose();
-		if (constItemProvider != null) constItemProvider.dispose();
-		if (affectationItemProvider != null) affectationItemProvider.dispose();
-		if (variableItemProvider != null) variableItemProvider.dispose();
+		if (declarationVarItemProvider != null) declarationVarItemProvider.dispose();
 		if (andItemProvider != null) andItemProvider.dispose();
 		if (orItemProvider != null) orItemProvider.dispose();
 		if (xorItemProvider != null) xorItemProvider.dispose();
@@ -770,6 +837,11 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (lessItemProvider != null) lessItemProvider.dispose();
 		if (equalItemProvider != null) equalItemProvider.dispose();
 		if (supEgalItemProvider != null) supEgalItemProvider.dispose();
+		if (utilisationVarItemProvider != null) utilisationVarItemProvider.dispose();
+		if (printItemProvider != null) printItemProvider.dispose();
+		if (stringTwItemProvider != null) stringTwItemProvider.dispose();
+		if (addItemProvider != null) addItemProvider.dispose();
+		if (mulItemProvider != null) mulItemProvider.dispose();
 	}
 
 }

@@ -146,12 +146,7 @@ public class BlockItemProvider extends StatementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createConst()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createAffectation()));
+				 TwitterModel2Factory.eINSTANCE.createDeclarationVar()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -242,6 +237,31 @@ public class BlockItemProvider extends StatementItemProvider {
 			(createChildParameter
 				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
 				 TwitterModel2Factory.eINSTANCE.createSupEgal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createUtilisationVar()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createprint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createStringTw()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createADD()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.BLOCK__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createMUL()));
 	}
 
 }

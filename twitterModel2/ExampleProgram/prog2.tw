@@ -1,0 +1,23 @@
+Program
+{
+		print  (tweets_user{"Ali","#France"});
+		
+		t1 := ProportionPositif {"Youssouf", "#France"};
+		t1 := "czrefze";
+		print(t1);	
+			
+		t2 := "Ali";
+		
+		t1 := t2;
+		
+		cptAli := countVisitProfil {t2};
+		
+		If(Greater(t1,t2) )
+		{
+			t3 := "Youssouf";
+			t3 := "Youssouf";
+			t3 := "Youssouf";
+			print ("first is greater than second");
+			t3 := "Youssouf"
+		}	
+}

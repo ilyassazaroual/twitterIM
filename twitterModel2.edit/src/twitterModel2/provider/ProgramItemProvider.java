@@ -161,12 +161,7 @@ public class ProgramItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createConst()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
-				 TwitterModel2Factory.eINSTANCE.createAffectation()));
+				 TwitterModel2Factory.eINSTANCE.createDeclarationVar()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -257,6 +252,31 @@ public class ProgramItemProvider
 			(createChildParameter
 				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
 				 TwitterModel2Factory.eINSTANCE.createSupEgal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createUtilisationVar()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createprint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createStringTw()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createADD()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TwitterModel2Package.Literals.PROGRAM__STATEMENT,
+				 TwitterModel2Factory.eINSTANCE.createMUL()));
 	}
 
 	/**

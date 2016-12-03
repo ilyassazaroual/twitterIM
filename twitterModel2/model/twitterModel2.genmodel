@@ -19,24 +19,20 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//If/condition"/>
     </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//Expression"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//ExpBinaire"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//ExpBinaire">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//ExpBinaire/exp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//ExpBinaire/exp2"/>
+    </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//Command">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Command/args"/>
     </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//Args">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute twitterModel2.ecore#//Args/arg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Args/expression"/>
     </genClasses>
-    <genClasses ecoreClass="twitterModel2.ecore#//Const"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//OpBool">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//OpBool/expressionG"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//OpBool/expressionD"/>
-    </genClasses>
-    <genClasses ecoreClass="twitterModel2.ecore#//Affectation">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Affectation/variable"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Affectation/opDroite"/>
-    </genClasses>
-    <genClasses ecoreClass="twitterModel2.ecore#//Variable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute twitterModel2.ecore#//Variable/nameVariable"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//OpBool"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//DeclarationVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute twitterModel2.ecore#//DeclarationVar/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//DeclarationVar/opDroite"/>
     </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//And"/>
     <genClasses ecoreClass="twitterModel2.ecore#//Or"/>
@@ -58,5 +54,16 @@
     <genClasses ecoreClass="twitterModel2.ecore#//Less"/>
     <genClasses ecoreClass="twitterModel2.ecore#//Equal"/>
     <genClasses ecoreClass="twitterModel2.ecore#//SupEgal"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//UtilisationVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//UtilisationVar/nameVar"/>
+    </genClasses>
+    <genClasses ecoreClass="twitterModel2.ecore#//print">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//print/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="twitterModel2.ecore#//StringTw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute twitterModel2.ecore#//StringTw/stringTw"/>
+    </genClasses>
+    <genClasses ecoreClass="twitterModel2.ecore#//ADD"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//MUL"/>
   </genPackages>
 </genmodel:GenModel>

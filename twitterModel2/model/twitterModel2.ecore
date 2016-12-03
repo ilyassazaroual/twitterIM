@@ -20,29 +20,25 @@
         eType="#//OpBool" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpBinaire" abstract="true" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinaire" abstract="true" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp2" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Args"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Args">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arg" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Const" eSuperTypes="#//Expression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OpBool" abstract="true" eSuperTypes="#//ExpBinaire">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expressionG" lowerBound="1"
-        eType="#//Expression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expressionD" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Affectation" eSuperTypes="#//ExpBinaire">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="#//Variable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="opDroite" eType="#//Expression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameVariable" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OpBool" abstract="true" eSuperTypes="#//ExpBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclarationVar" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opDroite" lowerBound="1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//OpBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//OpBool"/>
@@ -64,4 +60,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Less" eSuperTypes="#//OpBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Equal" eSuperTypes="#//OpBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="SupEgal" eSuperTypes="#//OpBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UtilisationVar" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameVar" lowerBound="1"
+        eType="#//DeclarationVar"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="print" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringTw" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stringTw" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ADD" eSuperTypes="#//ExpBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MUL" eSuperTypes="#//ExpBinaire"/>
 </ecore:EPackage>
