@@ -34,9 +34,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute twitterModel2.ecore#//DeclarationVar/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//DeclarationVar/opDroite"/>
     </genClasses>
-    <genClasses ecoreClass="twitterModel2.ecore#//And"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//Or"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//Xor"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//AND"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//OR"/>
     <genClasses ecoreClass="twitterModel2.ecore#//tweets_user"/>
     <genClasses ecoreClass="twitterModel2.ecore#//tweets_location"/>
     <genClasses ecoreClass="twitterModel2.ecore#//tweets_entity"/>
@@ -50,10 +49,9 @@
     <genClasses ecoreClass="twitterModel2.ecore#//CroissanceAbonne"/>
     <genClasses ecoreClass="twitterModel2.ecore#//moyFollowers"/>
     <genClasses ecoreClass="twitterModel2.ecore#//moyFavorited"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//Greater"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//Less"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//Equal"/>
-    <genClasses ecoreClass="twitterModel2.ecore#//SupEgal"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//GREATER"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//LESS"/>
+    <genClasses ecoreClass="twitterModel2.ecore#//EQUALS"/>
     <genClasses ecoreClass="twitterModel2.ecore#//UtilisationVar">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//UtilisationVar/nameVar"/>
     </genClasses>

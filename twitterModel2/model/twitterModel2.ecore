@@ -27,8 +27,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true" eSuperTypes="#//Expression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Args"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" lowerBound="1" upperBound="-1"
+        eType="#//Args" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Args">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
@@ -40,9 +40,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="opDroite" lowerBound="1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//OpBool"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//OpBool"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//OpBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AND" eSuperTypes="#//OpBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OR" eSuperTypes="#//OpBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="tweets_user" eSuperTypes="#//CommandTwitter"/>
   <eClassifiers xsi:type="ecore:EClass" name="tweets_location" eSuperTypes="#//CommandTwitter"/>
   <eClassifiers xsi:type="ecore:EClass" name="tweets_entity" eSuperTypes="#//CommandTwitter"/>
@@ -56,10 +55,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="CroissanceAbonne" eSuperTypes="#//CommandStat"/>
   <eClassifiers xsi:type="ecore:EClass" name="moyFollowers" eSuperTypes="#//CommandStat"/>
   <eClassifiers xsi:type="ecore:EClass" name="moyFavorited" eSuperTypes="#//CommandStat"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Greater" eSuperTypes="#//OpBool"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Less" eSuperTypes="#//OpBool"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Equal" eSuperTypes="#//OpBool"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SupEgal" eSuperTypes="#//OpBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GREATER" eSuperTypes="#//OpBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LESS" eSuperTypes="#//OpBool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EQUALS" eSuperTypes="#//OpBool"/>
   <eClassifiers xsi:type="ecore:EClass" name="UtilisationVar" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nameVar" lowerBound="1"
         eType="#//DeclarationVar"/>
