@@ -8,7 +8,6 @@
 'CroissanceAbonne'=31
 'EQUALS'=36
 'GREATER'=34
-'If'=15
 'LESS'=35
 'MUL'=39
 'OR'=22
@@ -18,6 +17,7 @@
 'countTweet'=29
 'countVisitProfil'=30
 'else'=18
+'if'=15
 'moyFavorited'=33
 'moyFollowers'=32
 'print'=37

@@ -5,6 +5,7 @@ package twitterModel2.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 import twitterModel2.tweets_user;
 
 /**
@@ -32,6 +33,11 @@ public class tweets_userImpl extends CommandTwitterImpl implements tweets_user {
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.TWEETS_USER;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //tweets_userImpl

@@ -34,9 +34,13 @@ public class TabSymbole {
 	}
 	
 	
-	public void addVariable(String identifiant){
-		if(!vars.contains(identifiant))
-		vars.add(identifiant);
+	public boolean addVariable(String identifiant){
+		boolean res  = false;
+		if(!vars.contains(identifiant)){
+			vars.add(identifiant);
+			res = true;
+		}
+		return res;
 	}
 	
 	

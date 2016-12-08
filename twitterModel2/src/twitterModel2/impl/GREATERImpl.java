@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.GREATER;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +33,11 @@ public class GREATERImpl extends OpBoolImpl implements GREATER {
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.GREATER;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //GREATERImpl

@@ -14,4 +14,5 @@ package twitterModel2;
  * @generated
  */
 public interface Expression extends Statement {
+	//public String accepteVisiteur(Visiteur v);
 } // Expression

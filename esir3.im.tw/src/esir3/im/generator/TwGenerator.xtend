@@ -7,6 +7,10 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import twitterModel2.Program
+import java.io.File
+import twitterModel2.Statement
+import twitterModel2.*
 
 /**
  * Generates code from your model files on save.
@@ -21,5 +25,27 @@ class TwGenerator extends AbstractGenerator {
 //				.filter(typeof(Greeting))
 //				.map[name]
 //				.join(', '))
+
+	var File file = new File(resource.URI.toString);
+		var String name = file.name;
+	var String output = "";
+
+		for (p : resource.allContents.toIterable.filter(Program)) {
+			output +="/*start program*/ \n import esir3.im.libs.*; \n"+ p.compile + '\n } \n } /*end program*/'
+		}
+		fsa.generateFile(name + ".java", output)
+	
+	}
+	/*def Visiteur getVisiteurCodeJava(){
+		return new VisiteurCodeJava(new TabSymbole());
+	}*/
+	def compile(Program p) {
+		var VisiteurCodeJava v = new VisiteurCodeJava(new TabSymbole());
+		var String res = p.accepteVisiteur(v)+"\n";
+		for(Statement st : p.statement){
+			res+=st.accepteVisiteur(v)+"\n";
+		}
+		v.tabSymbole.afficher;
+		return res;
 	}
 }

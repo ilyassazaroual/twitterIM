@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import twitterModel2.Block;
 import twitterModel2.Statement;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -145,6 +146,11 @@ public class BlockImpl extends StatementImpl implements Block {
 				return statement != null && !statement.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //BlockImpl

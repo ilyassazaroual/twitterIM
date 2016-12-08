@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.CroissanceAbonne;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +33,11 @@ public class CroissanceAbonneImpl extends CommandStatImpl implements CroissanceA
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.CROISSANCE_ABONNE;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //CroissanceAbonneImpl

@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import twitterModel2.DeclarationVar;
 import twitterModel2.TwitterModel2Package;
 import twitterModel2.UtilisationVar;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -151,6 +152,11 @@ public class UtilisationVarImpl extends ExpressionImpl implements UtilisationVar
 				return nameVar != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //UtilisationVarImpl

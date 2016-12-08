@@ -38,5 +38,6 @@ public interface Program extends EObject {
 	 * @generated
 	 */
 	EList<Statement> getStatement();
+	public String accepteVisiteur(Visiteur v);
 
 } // Program

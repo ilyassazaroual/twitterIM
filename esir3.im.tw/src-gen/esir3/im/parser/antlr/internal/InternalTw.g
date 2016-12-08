@@ -735,7 +735,7 @@ ruleIf returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='If'
+		otherlv_0='if'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getIfAccess().getIfKeyword_0());
 		}

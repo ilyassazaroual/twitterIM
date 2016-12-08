@@ -5,6 +5,7 @@ package twitterModel2.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 import twitterModel2.tweets_location;
 
 /**
@@ -32,6 +33,11 @@ public class tweets_locationImpl extends CommandTwitterImpl implements tweets_lo
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.TWEETS_LOCATION;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //tweets_locationImpl

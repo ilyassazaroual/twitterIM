@@ -5,6 +5,7 @@ package twitterModel2.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 import twitterModel2.tweets_date;
 
 /**
@@ -32,6 +33,11 @@ public class tweets_dateImpl extends CommandTwitterImpl implements tweets_date {
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.TWEETS_DATE;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //tweets_dateImpl

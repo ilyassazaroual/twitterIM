@@ -5,6 +5,7 @@ package twitterModel2.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 import twitterModel2.moyFollowers;
 
 /**
@@ -32,6 +33,11 @@ public class moyFollowersImpl extends CommandStatImpl implements moyFollowers {
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.MOY_FOLLOWERS;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //moyFollowersImpl

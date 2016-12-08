@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTwParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Program'", "'{'", "';'", "'}'", "'If'", "'('", "')'", "'else'", "':='", "'AND'", "','", "'OR'", "'tweets_user'", "'tweets_location'", "'tweets_entity'", "'tweets_date'", "'ProportionPositif'", "'ProportionNegatif'", "'countTweet'", "'countVisitProfil'", "'CroissanceAbonne'", "'moyFollowers'", "'moyFavorited'", "'GREATER'", "'LESS'", "'EQUALS'", "'print'", "'ADD'", "'MUL'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Program'", "'{'", "';'", "'}'", "'if'", "'('", "')'", "'else'", "':='", "'AND'", "','", "'OR'", "'tweets_user'", "'tweets_location'", "'tweets_entity'", "'tweets_date'", "'ProportionPositif'", "'ProportionNegatif'", "'countTweet'", "'countVisitProfil'", "'CroissanceAbonne'", "'moyFollowers'", "'moyFavorited'", "'GREATER'", "'LESS'", "'EQUALS'", "'print'", "'ADD'", "'MUL'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -1900,7 +1900,7 @@ public class InternalTwParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIf"
-    // InternalTw.g:730:1: ruleIf returns [EObject current=null] : (otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? ) ;
+    // InternalTw.g:730:1: ruleIf returns [EObject current=null] : (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? ) ;
     public final EObject ruleIf() throws RecognitionException {
         EObject current = null;
 
@@ -1919,11 +1919,11 @@ public class InternalTwParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTw.g:736:2: ( (otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? ) )
-            // InternalTw.g:737:2: (otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? )
+            // InternalTw.g:736:2: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? ) )
+            // InternalTw.g:737:2: (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? )
             {
-            // InternalTw.g:737:2: (otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? )
-            // InternalTw.g:738:3: otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )?
+            // InternalTw.g:737:2: (otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )? )
+            // InternalTw.g:738:3: otherlv_0= 'if' otherlv_1= '(' ( (lv_condition_2_0= ruleOpBool ) ) otherlv_3= ')' ( (lv_ifBlock_4_0= ruleBlock ) ) (otherlv_5= 'else' ( (lv_elseBlock_6_0= ruleBlock ) ) )?
             {
             otherlv_0=(Token)match(input,15,FOLLOW_7); 
 

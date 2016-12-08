@@ -1573,7 +1573,7 @@ rule__If__Group__0__Impl
 :
 (
 	{ before(grammarAccess.getIfAccess().getIfKeyword_0()); }
-	'If'
+	'if'
 	{ after(grammarAccess.getIfAccess().getIfKeyword_0()); }
 )
 ;

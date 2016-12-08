@@ -45,4 +45,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="User_mention" eSuperTypes="#//Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Url_Entity" eSuperTypes="#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Prog"/>
+  <eClassifiers xsi:type="ecore:EClass" name="If"/>
 </ecore:EPackage>

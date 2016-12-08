@@ -1,5 +1,7 @@
 package twitterModel2;
 
+import org.eclipse.emf.common.util.EList;
+
 import twitterModel2.ADD;
 import twitterModel2.AND;
 //import twitterModel2.Args;
@@ -37,22 +39,43 @@ public class VisiteurCodeJava extends Visiteur {
 		this.tabSymbole = tabSymbole;
 		this.cptParams = 0;
 	}
+	
+
+	public TabSymbole getTabSymbole() {
+		return tabSymbole;
+	}
+
+
+	public void setTabSymbole(TabSymbole tabSymbole) {
+		this.tabSymbole = tabSymbole;
+	}
+
+
+	public int getCptParams() {
+		return cptParams;
+	}
+
+
+	public void setCptParams(int cptParams) {
+		this.cptParams = cptParams;
+	}
+
 
 	@Override
 	public String visite(Program p) {
 		String res = "public class MainClass {\n"+
-					  "public static void main(String[] args) {\n";
+				"public static void main(String[] args) {\n";
 		//A faire : déclaarer les variables***************!!!!!!
-		for(String s : tabSymbole.getTabSymb()){
-			res += "String "+s+"= new String();\n";
-		}
+//		for(String s : tabSymbole.getTabSymb()){
+//			res += "String "+s+"= new String();\n";
+//		}
 		return res;
 	}
 
-/*	@Override
+	/*	@Override
 	public String visite(Statement st) {
 		// TODO Auto-generated method stub
-		
+
 		return null;
 	}*/
 
@@ -70,7 +93,11 @@ public class VisiteurCodeJava extends Visiteur {
 
 	@Override
 	public String visite(DeclarationVar decVar) {
-		String res = decVar.getName()+"="+visite(decVar.getOpDroite())+";";
+		String res="";
+		if(this.tabSymbole.addVariable(decVar.getName())){
+			res+="String "+decVar.getName()+" = new String();\n";
+		}
+		 res += decVar.getName()+"="+visite(decVar.getOpDroite())+";";
 		return res;
 	}
 
@@ -88,92 +115,163 @@ public class VisiteurCodeJava extends Visiteur {
 
 	@Override
 	public String visite(tweets_user twUsr) {
-		String declar ="List<String> params"+this.cptParams+"= new ArrayList<String>();";
-		String res = "LibTweet.getUser(";
-		int i = 0;
-//		for(Args arg : twUsr.getArgs()){
-//			//arg.ge
-//		}
-		res+=");";
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : twUsr.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getUser("+listName+");\n";	
 		return res;
 	}
 
 	@Override
 	public String visite(tweets_location twLoc) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : twLoc.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getLocation("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(tweets_entity twEnt) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : twEnt.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getEntity("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(tweets_date twDate) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : twDate.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getDate("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(ProportionPositif propPos) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : propPos.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getProportionPositif"+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(ProportionNegatif propNeg) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : propNeg.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getProportionNegatif("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(countTweet countTw) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : countTw.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getCountTweet("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(countVisitProfil countVisitP) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : countVisitP.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getCountVisitProfil("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(CroissanceAbonne croisAbn) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : croisAbn.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getCroissanceAbonne("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(moyFollowers moyFlow) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : moyFlow.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getMoyenFollowers("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(moyFavorited moyFavorite) {
-		// TODO Auto-generated method stub
-		return null;
+		String listName ="params"+this.cptParams;
+		this.cptParams++;
+		String declar ="List<String> "+listName+"= new ArrayList<String>();\n";
+		for(UtilisationVar arg : moyFavorite.getArgs()){
+			String varName = arg.getNameVar().getName();
+			declar+=listName+".add("+varName+");\n";
+		}
+		String res =declar+ "(new LibTw()).getMoyFavorited("+listName+");\n";	
+		return res;
 	}
 
 	@Override
 	public String visite(GREATER great) {
-		// TODO Auto-generated method stub
-		return null;
+		String res ="("+ visite(great.getExp1())+") > ("+visite(great.getExp2())+")";
+		return res;
 	}
 
 	@Override
 	public String visite(LESS less) {
-		// TODO Auto-generated method stub
-		return null;
+		String res ="("+ visite(less.getExp1())+") < ("+visite(less.getExp2())+")";
+		return res;
 	}
 
 	@Override
 	public String visite(EQUALS equal) {
-		// TODO Auto-generated method stub
-		return null;
+		String res ="("+ visite(equal.getExp1())+") == ("+visite(equal.getExp2())+")";
+		return res;
 	}
 
 	@Override
@@ -188,33 +286,34 @@ public class VisiteurCodeJava extends Visiteur {
 
 	@Override
 	public String visite(ADD add) {
-		// TODO Auto-generated method stub
-		return null;
+		String res =visite(add.getExp1())+" + "+visite(add.getExp2());
+		return res;
 	}
 
 	@Override
 	public String visite(MUL mul) {
-		// TODO Auto-generated method stub
-		return null;
+		String res =visite(mul.getExp1())+" * "+visite(mul.getExp2());
+		return res;
 	}
 
 	@Override
 	public String visite(Block b) {
-		// TODO Auto-generated method stub
-		//b.getStatement()
-		return "{}";
+		String res = "{";
+		for(Statement st : b.getStatement()){
+			res+=visite(st)+";";
+		}
+		res+="}";
+		return res ;
 	}
 
 	@Override
 	public String visite(Expression exp) {
-		
-		return null;
+		return exp.accepteVisiteur(this);
 	}
 
 	@Override
 	public String visite(Statement st) {
-		// TODO Auto-generated method stub
-		return st.getClass().getTypeName();
+		return "statement";
 	}
 
 }

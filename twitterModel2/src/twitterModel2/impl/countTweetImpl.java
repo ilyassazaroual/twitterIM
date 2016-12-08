@@ -5,6 +5,7 @@ package twitterModel2.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 import twitterModel2.countTweet;
 
 /**
@@ -32,6 +33,11 @@ public class countTweetImpl extends CommandStatImpl implements countTweet {
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.COUNT_TWEET;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //countTweetImpl

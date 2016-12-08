@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import twitterModel2.StringTw;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -157,6 +158,11 @@ public class StringTwImpl extends ExpressionImpl implements StringTw {
 		result.append(stringTw);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //StringTwImpl

@@ -3,10 +3,21 @@
  */
 package esir3.im.generator;
 
+import com.google.common.collect.Iterables;
+import java.io.File;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import twitterModel2.Program;
+import twitterModel2.Statement;
+import twitterModel2.TabSymbole;
+import twitterModel2.VisiteurCodeJava;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +28,43 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class TwGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    URI _uRI = resource.getURI();
+    String _string = _uRI.toString();
+    File file = new File(_string);
+    String name = file.getName();
+    String output = "";
+    TreeIterator<EObject> _allContents = resource.getAllContents();
+    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
+    Iterable<Program> _filter = Iterables.<Program>filter(_iterable, Program.class);
+    for (final Program p : _filter) {
+      String _output = output;
+      String _compile = this.compile(p);
+      String _plus = ("/*start program*/ \n import esir3.im.libs.*; \n" + _compile);
+      String _plus_1 = (_plus + "\n } \n } /*end program*/");
+      output = (_output + _plus_1);
+    }
+    fsa.generateFile((name + ".java"), output);
+  }
+  
+  /**
+   * def Visiteur getVisiteurCodeJava(){
+   * return new VisiteurCodeJava(new TabSymbole());
+   * }
+   */
+  public String compile(final Program p) {
+    TabSymbole _tabSymbole = new TabSymbole();
+    VisiteurCodeJava v = new VisiteurCodeJava(_tabSymbole);
+    String _accepteVisiteur = p.accepteVisiteur(v);
+    String res = (_accepteVisiteur + "\n");
+    EList<Statement> _statement = p.getStatement();
+    for (final Statement st : _statement) {
+      String _res = res;
+      String _accepteVisiteur_1 = st.accepteVisiteur(v);
+      String _plus = (_accepteVisiteur_1 + "\n");
+      res = (_res + _plus);
+    }
+    TabSymbole _tabSymbole_1 = v.getTabSymbole();
+    _tabSymbole_1.afficher();
+    return res;
   }
 }

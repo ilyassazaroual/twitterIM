@@ -14,6 +14,7 @@ import twitterModel2.Block;
 import twitterModel2.If;
 import twitterModel2.OpBool;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -303,6 +304,11 @@ public class IfImpl extends StatementImpl implements If {
 				return condition != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //IfImpl

@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import twitterModel2.Expression;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 import twitterModel2.print;
 
 /**
@@ -170,6 +171,11 @@ public class printImpl extends StatementImpl implements print {
 				return expression != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //printImpl

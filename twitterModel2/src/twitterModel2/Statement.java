@@ -15,4 +15,5 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Statement extends EObject {
+	public String accepteVisiteur(Visiteur v);
 } // Statement

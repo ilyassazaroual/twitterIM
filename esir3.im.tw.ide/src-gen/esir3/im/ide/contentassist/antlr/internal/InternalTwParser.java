@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTwParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Program'", "'{'", "'}'", "';'", "'If'", "'('", "')'", "'else'", "':='", "'AND'", "','", "'OR'", "'tweets_user'", "'tweets_location'", "'tweets_entity'", "'tweets_date'", "'ProportionPositif'", "'ProportionNegatif'", "'countTweet'", "'countVisitProfil'", "'CroissanceAbonne'", "'moyFollowers'", "'moyFavorited'", "'GREATER'", "'LESS'", "'EQUALS'", "'print'", "'ADD'", "'MUL'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Program'", "'{'", "'}'", "';'", "'if'", "'('", "')'", "'else'", "':='", "'AND'", "','", "'OR'", "'tweets_user'", "'tweets_location'", "'tweets_entity'", "'tweets_date'", "'ProportionPositif'", "'ProportionNegatif'", "'countTweet'", "'countVisitProfil'", "'CroissanceAbonne'", "'moyFollowers'", "'moyFavorited'", "'GREATER'", "'LESS'", "'EQUALS'", "'print'", "'ADD'", "'MUL'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -4896,17 +4896,17 @@ public class InternalTwParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__If__Group__0__Impl"
-    // InternalTw.g:1569:1: rule__If__Group__0__Impl : ( 'If' ) ;
+    // InternalTw.g:1569:1: rule__If__Group__0__Impl : ( 'if' ) ;
     public final void rule__If__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTw.g:1573:1: ( ( 'If' ) )
-            // InternalTw.g:1574:1: ( 'If' )
+            // InternalTw.g:1573:1: ( ( 'if' ) )
+            // InternalTw.g:1574:1: ( 'if' )
             {
-            // InternalTw.g:1574:1: ( 'If' )
-            // InternalTw.g:1575:2: 'If'
+            // InternalTw.g:1574:1: ( 'if' )
+            // InternalTw.g:1575:2: 'if'
             {
              before(grammarAccess.getIfAccess().getIfKeyword_0()); 
             match(input,15,FOLLOW_2); 

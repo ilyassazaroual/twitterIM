@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import twitterModel2.ProportionPositif;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +33,11 @@ public class ProportionPositifImpl extends CommandStatImpl implements Proportion
 	@Override
 	protected EClass eStaticClass() {
 		return TwitterModel2Package.Literals.PROPORTION_POSITIF;
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //ProportionPositifImpl

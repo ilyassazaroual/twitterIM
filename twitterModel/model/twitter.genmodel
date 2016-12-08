@@ -39,6 +39,9 @@
     </genClasses>
     <genClasses ecoreClass="twitter.ecore#//User_mention"/>
     <genClasses ecoreClass="twitter.ecore#//Url_Entity"/>
-    <genClasses ecoreClass="twitter.ecore#//Root"/>
+    <genClasses ecoreClass="twitter.ecore#//Statement"/>
+    <genClasses ecoreClass="twitter.ecore#//Expression"/>
+    <genClasses ecoreClass="twitter.ecore#//Prog"/>
+    <genClasses ecoreClass="twitter.ecore#//If"/>
   </genPackages>
 </genmodel:GenModel>

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import twitterModel2.DeclarationVar;
 import twitterModel2.Expression;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.Visiteur;
 
 /**
  * <!-- begin-user-doc -->
@@ -238,6 +239,11 @@ public class DeclarationVarImpl extends StatementImpl implements DeclarationVar 
 		result.append(name);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public String accepteVisiteur(Visiteur v) {
+		return v.visite(this);
 	}
 
 } //DeclarationVarImpl
