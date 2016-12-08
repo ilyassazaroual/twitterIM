@@ -325,43 +325,6 @@ public interface TwitterModel2Package extends EPackage {
 	int COMMAND_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link twitterModel2.impl.ArgsImpl <em>Args</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see twitterModel2.impl.ArgsImpl
-	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getArgs()
-	 * @generated
-	 */
-	int ARGS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGS__EXPRESSION = 0;
-
-	/**
-	 * The number of structural features of the '<em>Args</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Args</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link twitterModel2.impl.OpBoolImpl <em>Op Bool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -369,7 +332,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getOpBool()
 	 * @generated
 	 */
-	int OP_BOOL = 8;
+	int OP_BOOL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -415,7 +378,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getDeclarationVar()
 	 * @generated
 	 */
-	int DECLARATION_VAR = 9;
+	int DECLARATION_VAR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -461,7 +424,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getAND()
 	 * @generated
 	 */
-	int AND = 10;
+	int AND = 9;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -507,7 +470,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getOR()
 	 * @generated
 	 */
-	int OR = 11;
+	int OR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -553,7 +516,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getCommandTwitter()
 	 * @generated
 	 */
-	int COMMAND_TWITTER = 17;
+	int COMMAND_TWITTER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -590,7 +553,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#gettweets_user()
 	 * @generated
 	 */
-	int TWEETS_USER = 12;
+	int TWEETS_USER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -627,7 +590,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#gettweets_location()
 	 * @generated
 	 */
-	int TWEETS_LOCATION = 13;
+	int TWEETS_LOCATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -664,7 +627,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#gettweets_entity()
 	 * @generated
 	 */
-	int TWEETS_ENTITY = 14;
+	int TWEETS_ENTITY = 13;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -701,7 +664,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#gettweets_date()
 	 * @generated
 	 */
-	int TWEETS_DATE = 15;
+	int TWEETS_DATE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -738,7 +701,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getCommandStat()
 	 * @generated
 	 */
-	int COMMAND_STAT = 16;
+	int COMMAND_STAT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -775,7 +738,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getProportionPositif()
 	 * @generated
 	 */
-	int PROPORTION_POSITIF = 18;
+	int PROPORTION_POSITIF = 17;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -812,7 +775,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getProportionNegatif()
 	 * @generated
 	 */
-	int PROPORTION_NEGATIF = 19;
+	int PROPORTION_NEGATIF = 18;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -849,7 +812,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getcountTweet()
 	 * @generated
 	 */
-	int COUNT_TWEET = 20;
+	int COUNT_TWEET = 19;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -886,7 +849,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getcountVisitProfil()
 	 * @generated
 	 */
-	int COUNT_VISIT_PROFIL = 21;
+	int COUNT_VISIT_PROFIL = 20;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -923,7 +886,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getCroissanceAbonne()
 	 * @generated
 	 */
-	int CROISSANCE_ABONNE = 22;
+	int CROISSANCE_ABONNE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -960,7 +923,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getmoyFollowers()
 	 * @generated
 	 */
-	int MOY_FOLLOWERS = 23;
+	int MOY_FOLLOWERS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -997,7 +960,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getmoyFavorited()
 	 * @generated
 	 */
-	int MOY_FAVORITED = 24;
+	int MOY_FAVORITED = 23;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -1034,7 +997,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getGREATER()
 	 * @generated
 	 */
-	int GREATER = 25;
+	int GREATER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -1080,7 +1043,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getLESS()
 	 * @generated
 	 */
-	int LESS = 26;
+	int LESS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -1126,7 +1089,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getEQUALS()
 	 * @generated
 	 */
-	int EQUALS = 27;
+	int EQUALS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -1172,7 +1135,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getUtilisationVar()
 	 * @generated
 	 */
-	int UTILISATION_VAR = 28;
+	int UTILISATION_VAR = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name Var</b></em>' reference.
@@ -1209,7 +1172,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getprint()
 	 * @generated
 	 */
-	int PRINT = 29;
+	int PRINT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1246,7 +1209,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getStringTw()
 	 * @generated
 	 */
-	int STRING_TW = 30;
+	int STRING_TW = 29;
 
 	/**
 	 * The feature id for the '<em><b>String Tw</b></em>' attribute.
@@ -1283,7 +1246,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getADD()
 	 * @generated
 	 */
-	int ADD = 31;
+	int ADD = 30;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -1329,7 +1292,7 @@ public interface TwitterModel2Package extends EPackage {
 	 * @see twitterModel2.impl.TwitterModel2PackageImpl#getMUL()
 	 * @generated
 	 */
-	int MUL = 32;
+	int MUL = 31;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -1525,27 +1488,6 @@ public interface TwitterModel2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getCommand_Args();
-
-	/**
-	 * Returns the meta object for class '{@link twitterModel2.Args <em>Args</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Args</em>'.
-	 * @see twitterModel2.Args
-	 * @generated
-	 */
-	EClass getArgs();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link twitterModel2.Args#getExpression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see twitterModel2.Args#getExpression()
-	 * @see #getArgs()
-	 * @generated
-	 */
-	EReference getArgs_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link twitterModel2.OpBool <em>Op Bool</em>}'.
@@ -2008,24 +1950,6 @@ public interface TwitterModel2Package extends EPackage {
 		 * @generated
 		 */
 		EReference COMMAND__ARGS = eINSTANCE.getCommand_Args();
-
-		/**
-		 * The meta object literal for the '{@link twitterModel2.impl.ArgsImpl <em>Args</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see twitterModel2.impl.ArgsImpl
-		 * @see twitterModel2.impl.TwitterModel2PackageImpl#getArgs()
-		 * @generated
-		 */
-		EClass ARGS = eINSTANCE.getArgs();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARGS__EXPRESSION = eINSTANCE.getArgs_Expression();
 
 		/**
 		 * The meta object literal for the '{@link twitterModel2.impl.OpBoolImpl <em>Op Bool</em>}' class.

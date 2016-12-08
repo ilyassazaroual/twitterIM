@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import twitterModel2.Args;
 import twitterModel2.Command;
 import twitterModel2.TwitterModel2Package;
+import twitterModel2.UtilisationVar;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public abstract class CommandImpl extends ExpressionImpl implements Command {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Args> args;
+	protected EList<UtilisationVar> args;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public abstract class CommandImpl extends ExpressionImpl implements Command {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Args> getArgs() {
+	public EList<UtilisationVar> getArgs() {
 		if (args == null) {
-			args = new EObjectContainmentEList<Args>(Args.class, this, TwitterModel2Package.COMMAND__ARGS);
+			args = new EObjectContainmentEList<UtilisationVar>(UtilisationVar.class, this, TwitterModel2Package.COMMAND__ARGS);
 		}
 		return args;
 	}
@@ -112,7 +112,7 @@ public abstract class CommandImpl extends ExpressionImpl implements Command {
 		switch (featureID) {
 			case TwitterModel2Package.COMMAND__ARGS:
 				getArgs().clear();
-				getArgs().addAll((Collection<? extends Args>)newValue);
+				getArgs().addAll((Collection<? extends UtilisationVar>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

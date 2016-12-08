@@ -1036,28 +1036,21 @@ ruletweets_user returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTweets_userAccess().getTweets_userAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='tweets_user'
+		otherlv_0='tweets_user'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getTweets_userAccess().getTweets_userKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getTweets_userAccess().getTweets_userKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getTweets_userAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getTweets_userAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getTweets_userAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getTweets_userAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTweets_userRule());
@@ -1065,23 +1058,23 @@ ruletweets_user returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getTweets_userAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getTweets_userAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getTweets_userAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getTweets_userAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTweets_userRule());
@@ -1089,17 +1082,17 @@ ruletweets_user returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getTweets_userAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getTweets_userAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1120,28 +1113,21 @@ ruletweets_location returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTweets_locationAccess().getTweets_locationAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='tweets_location'
+		otherlv_0='tweets_location'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getTweets_locationAccess().getTweets_locationKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getTweets_locationAccess().getTweets_locationKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getTweets_locationAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getTweets_locationAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getTweets_locationAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getTweets_locationAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTweets_locationRule());
@@ -1149,23 +1135,23 @@ ruletweets_location returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getTweets_locationAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getTweets_locationAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getTweets_locationAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getTweets_locationAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTweets_locationRule());
@@ -1173,17 +1159,17 @@ ruletweets_location returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getTweets_locationAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getTweets_locationAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1204,28 +1190,21 @@ ruletweets_entity returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTweets_entityAccess().getTweets_entityAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='tweets_entity'
+		otherlv_0='tweets_entity'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getTweets_entityAccess().getTweets_entityKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getTweets_entityAccess().getTweets_entityKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getTweets_entityAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getTweets_entityAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getTweets_entityAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getTweets_entityAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTweets_entityRule());
@@ -1233,23 +1212,23 @@ ruletweets_entity returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getTweets_entityAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getTweets_entityAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getTweets_entityAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getTweets_entityAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTweets_entityRule());
@@ -1257,17 +1236,17 @@ ruletweets_entity returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getTweets_entityAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getTweets_entityAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1288,28 +1267,21 @@ ruletweets_date returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTweets_dateAccess().getTweets_dateAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='tweets_date'
+		otherlv_0='tweets_date'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getTweets_dateAccess().getTweets_dateKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getTweets_dateAccess().getTweets_dateKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getTweets_dateAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getTweets_dateAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getTweets_dateAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getTweets_dateAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getTweets_dateRule());
@@ -1317,23 +1289,23 @@ ruletweets_date returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getTweets_dateAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getTweets_dateAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getTweets_dateAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getTweets_dateAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getTweets_dateRule());
@@ -1341,17 +1313,17 @@ ruletweets_date returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getTweets_dateAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getTweets_dateAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1372,28 +1344,21 @@ ruleProportionPositif returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getProportionPositifAccess().getProportionPositifAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='ProportionPositif'
+		otherlv_0='ProportionPositif'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getProportionPositifAccess().getProportionPositifKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getProportionPositifAccess().getProportionPositifKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getProportionPositifAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getProportionPositifAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getProportionPositifAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getProportionPositifAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getProportionPositifRule());
@@ -1401,23 +1366,23 @@ ruleProportionPositif returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getProportionPositifAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getProportionPositifAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getProportionPositifAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getProportionPositifAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getProportionPositifRule());
@@ -1425,17 +1390,17 @@ ruleProportionPositif returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getProportionPositifAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getProportionPositifAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1456,28 +1421,21 @@ ruleProportionNegatif returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getProportionNegatifAccess().getProportionNegatifAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='ProportionNegatif'
+		otherlv_0='ProportionNegatif'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getProportionNegatifAccess().getProportionNegatifKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getProportionNegatifAccess().getProportionNegatifKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getProportionNegatifAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getProportionNegatifAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getProportionNegatifAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getProportionNegatifAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getProportionNegatifRule());
@@ -1485,23 +1443,23 @@ ruleProportionNegatif returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getProportionNegatifAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getProportionNegatifAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getProportionNegatifAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getProportionNegatifAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getProportionNegatifRule());
@@ -1509,17 +1467,17 @@ ruleProportionNegatif returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getProportionNegatifAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getProportionNegatifAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1540,28 +1498,21 @@ rulecountTweet returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getCountTweetAccess().getCountTweetAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='countTweet'
+		otherlv_0='countTweet'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getCountTweetAccess().getCountTweetKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getCountTweetAccess().getCountTweetKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getCountTweetAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getCountTweetAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCountTweetAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getCountTweetAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCountTweetRule());
@@ -1569,23 +1520,23 @@ rulecountTweet returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getCountTweetAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getCountTweetAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getCountTweetAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getCountTweetAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getCountTweetRule());
@@ -1593,17 +1544,17 @@ rulecountTweet returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getCountTweetAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getCountTweetAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1624,28 +1575,21 @@ rulecountVisitProfil returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getCountVisitProfilAccess().getCountVisitProfilAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='countVisitProfil'
+		otherlv_0='countVisitProfil'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getCountVisitProfilAccess().getCountVisitProfilKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getCountVisitProfilAccess().getCountVisitProfilKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getCountVisitProfilAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getCountVisitProfilAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCountVisitProfilAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getCountVisitProfilAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCountVisitProfilRule());
@@ -1653,23 +1597,23 @@ rulecountVisitProfil returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getCountVisitProfilAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getCountVisitProfilAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getCountVisitProfilAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getCountVisitProfilAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getCountVisitProfilRule());
@@ -1677,17 +1621,17 @@ rulecountVisitProfil returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getCountVisitProfilAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getCountVisitProfilAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1708,28 +1652,21 @@ ruleCroissanceAbonne returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getCroissanceAbonneAccess().getCroissanceAbonneAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='CroissanceAbonne'
+		otherlv_0='CroissanceAbonne'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getCroissanceAbonneAccess().getCroissanceAbonneKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getCroissanceAbonneAccess().getCroissanceAbonneKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getCroissanceAbonneAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getCroissanceAbonneAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCroissanceAbonneAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getCroissanceAbonneAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCroissanceAbonneRule());
@@ -1737,23 +1674,23 @@ ruleCroissanceAbonne returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getCroissanceAbonneAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getCroissanceAbonneAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getCroissanceAbonneAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getCroissanceAbonneAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getCroissanceAbonneRule());
@@ -1761,17 +1698,17 @@ ruleCroissanceAbonne returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getCroissanceAbonneAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getCroissanceAbonneAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1792,28 +1729,21 @@ rulemoyFollowers returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getMoyFollowersAccess().getMoyFollowersAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='moyFollowers'
+		otherlv_0='moyFollowers'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getMoyFollowersAccess().getMoyFollowersKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getMoyFollowersAccess().getMoyFollowersKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getMoyFollowersAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getMoyFollowersAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMoyFollowersAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getMoyFollowersAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMoyFollowersRule());
@@ -1821,23 +1751,23 @@ rulemoyFollowers returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getMoyFollowersAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getMoyFollowersAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getMoyFollowersAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getMoyFollowersAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getMoyFollowersRule());
@@ -1845,17 +1775,17 @@ rulemoyFollowers returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getMoyFollowersAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getMoyFollowersAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -1876,28 +1806,21 @@ rulemoyFavorited returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getMoyFavoritedAccess().getMoyFavoritedAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='moyFavorited'
+		otherlv_0='moyFavorited'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getMoyFavoritedAccess().getMoyFavoritedKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getMoyFavoritedAccess().getMoyFavoritedKeyword_0());
 		}
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getMoyFavoritedAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getMoyFavoritedAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMoyFavoritedAccess().getArgsArgsParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getMoyFavoritedAccess().getArgsUtilisationVarParserRuleCall_2_0_0());
 					}
-					lv_args_3_0=ruleArgs
+					lv_args_2_0=ruleUtilisationVar
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMoyFavoritedRule());
@@ -1905,23 +1828,23 @@ rulemoyFavorited returns [EObject current=null]
 						add(
 							$current,
 							"args",
-							lv_args_3_0,
-							"esir3.im.Tw.Args");
+							lv_args_2_0,
+							"esir3.im.Tw.UtilisationVar");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_4=','
+				otherlv_3=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getMoyFavoritedAccess().getCommaKeyword_3_1_0());
+					newLeafNode(otherlv_3, grammarAccess.getMoyFavoritedAccess().getCommaKeyword_2_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getMoyFavoritedAccess().getArgsArgsParserRuleCall_3_1_1_0());
+							newCompositeNode(grammarAccess.getMoyFavoritedAccess().getArgsUtilisationVarParserRuleCall_2_1_1_0());
 						}
-						lv_args_5_0=ruleArgs
+						lv_args_4_0=ruleUtilisationVar
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getMoyFavoritedRule());
@@ -1929,17 +1852,17 @@ rulemoyFavorited returns [EObject current=null]
 							add(
 								$current,
 								"args",
-								lv_args_5_0,
-								"esir3.im.Tw.Args");
+								lv_args_4_0,
+								"esir3.im.Tw.UtilisationVar");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-		)?
-		otherlv_6='}'
+		)
+		otherlv_5='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getMoyFavoritedAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getMoyFavoritedAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -2421,42 +2344,6 @@ ruleMUL returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getMULAccess().getRightParenthesisKeyword_5());
 		}
-	)
-;
-
-// Entry rule entryRuleArgs
-entryRuleArgs returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getArgsRule()); }
-	iv_ruleArgs=ruleArgs
-	{ $current=$iv_ruleArgs.current; }
-	EOF;
-
-// Rule Args
-ruleArgs returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				newCompositeNode(grammarAccess.getArgsAccess().getExpressionExpressionParserRuleCall_0());
-			}
-			lv_expression_0_0=ruleExpression
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getArgsRule());
-				}
-				set(
-					$current,
-					"expression",
-					lv_expression_0_0,
-					"esir3.im.Tw.Expression");
-				afterParserOrEnumRuleCall();
-			}
-		)
 	)
 ;
 

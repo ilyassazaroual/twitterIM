@@ -141,29 +141,6 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link twitterModel2.Args} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArgsItemProvider argsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link twitterModel2.Args}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArgsAdapter() {
-		if (argsItemProvider == null) {
-			argsItemProvider = new ArgsItemProvider(this);
-		}
-
-		return argsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link twitterModel2.DeclarationVar} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -771,7 +748,6 @@ public class TwitterModel2ItemProviderAdapterFactory extends TwitterModel2Adapte
 		if (programItemProvider != null) programItemProvider.dispose();
 		if (blockItemProvider != null) blockItemProvider.dispose();
 		if (ifItemProvider != null) ifItemProvider.dispose();
-		if (argsItemProvider != null) argsItemProvider.dispose();
 		if (declarationVarItemProvider != null) declarationVarItemProvider.dispose();
 		if (andItemProvider != null) andItemProvider.dispose();
 		if (orItemProvider != null) orItemProvider.dispose();

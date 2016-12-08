@@ -49,15 +49,6 @@ public interface TwitterModel2Factory extends EFactory {
 	If createIf();
 
 	/**
-	 * Returns a new object of class '<em>Args</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Args</em>'.
-	 * @generated
-	 */
-	Args createArgs();
-
-	/**
 	 * Returns a new object of class '<em>Declaration Var</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

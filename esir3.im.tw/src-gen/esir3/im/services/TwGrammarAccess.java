@@ -560,640 +560,585 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	public class Tweets_userElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.tweets_user");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cTweets_userAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cTweets_userKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cTweets_userKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_user:
-		//	{tweets_user}
 		//	'tweets_user'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{tweets_user} 'tweets_user' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'tweets_user' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{tweets_user}
-		public Action getTweets_userAction_0() { return cTweets_userAction_0; }
-		
 		//'tweets_user'
-		public Keyword getTweets_userKeyword_1() { return cTweets_userKeyword_1; }
+		public Keyword getTweets_userKeyword_0() { return cTweets_userKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class Tweets_locationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.tweets_location");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cTweets_locationAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cTweets_locationKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cTweets_locationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_location:
-		//	{tweets_location}
 		//	'tweets_location'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{tweets_location} 'tweets_location' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'tweets_location' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{tweets_location}
-		public Action getTweets_locationAction_0() { return cTweets_locationAction_0; }
-		
 		//'tweets_location'
-		public Keyword getTweets_locationKeyword_1() { return cTweets_locationKeyword_1; }
+		public Keyword getTweets_locationKeyword_0() { return cTweets_locationKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class Tweets_entityElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.tweets_entity");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cTweets_entityAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cTweets_entityKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cTweets_entityKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_entity:
-		//	{tweets_entity}
 		//	'tweets_entity'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{tweets_entity} 'tweets_entity' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'tweets_entity' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{tweets_entity}
-		public Action getTweets_entityAction_0() { return cTweets_entityAction_0; }
-		
 		//'tweets_entity'
-		public Keyword getTweets_entityKeyword_1() { return cTweets_entityKeyword_1; }
+		public Keyword getTweets_entityKeyword_0() { return cTweets_entityKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class Tweets_dateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.tweets_date");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cTweets_dateAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cTweets_dateKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cTweets_dateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_date:
-		//	{tweets_date}
 		//	'tweets_date'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{tweets_date} 'tweets_date' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'tweets_date' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{tweets_date}
-		public Action getTweets_dateAction_0() { return cTweets_dateAction_0; }
-		
 		//'tweets_date'
-		public Keyword getTweets_dateKeyword_1() { return cTweets_dateKeyword_1; }
+		public Keyword getTweets_dateKeyword_0() { return cTweets_dateKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class ProportionPositifElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.ProportionPositif");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cProportionPositifAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cProportionPositifKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cProportionPositifKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ProportionPositif:
-		//	{ProportionPositif}
 		//	'ProportionPositif'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ProportionPositif} 'ProportionPositif' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'ProportionPositif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{ProportionPositif}
-		public Action getProportionPositifAction_0() { return cProportionPositifAction_0; }
-		
 		//'ProportionPositif'
-		public Keyword getProportionPositifKeyword_1() { return cProportionPositifKeyword_1; }
+		public Keyword getProportionPositifKeyword_0() { return cProportionPositifKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class ProportionNegatifElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.ProportionNegatif");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cProportionNegatifAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cProportionNegatifKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cProportionNegatifKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ProportionNegatif:
-		//	{ProportionNegatif}
 		//	'ProportionNegatif'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ProportionNegatif} 'ProportionNegatif' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'ProportionNegatif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{ProportionNegatif}
-		public Action getProportionNegatifAction_0() { return cProportionNegatifAction_0; }
-		
 		//'ProportionNegatif'
-		public Keyword getProportionNegatifKeyword_1() { return cProportionNegatifKeyword_1; }
+		public Keyword getProportionNegatifKeyword_0() { return cProportionNegatifKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class CountTweetElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.countTweet");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cCountTweetAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cCountTweetKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cCountTweetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//countTweet:
-		//	{countTweet}
 		//	'countTweet'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{countTweet} 'countTweet' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'countTweet' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{countTweet}
-		public Action getCountTweetAction_0() { return cCountTweetAction_0; }
-		
 		//'countTweet'
-		public Keyword getCountTweetKeyword_1() { return cCountTweetKeyword_1; }
+		public Keyword getCountTweetKeyword_0() { return cCountTweetKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class CountVisitProfilElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.countVisitProfil");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cCountVisitProfilAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cCountVisitProfilKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cCountVisitProfilKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//countVisitProfil:
-		//	{countVisitProfil}
 		//	'countVisitProfil'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{countVisitProfil} 'countVisitProfil' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'countVisitProfil' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{countVisitProfil}
-		public Action getCountVisitProfilAction_0() { return cCountVisitProfilAction_0; }
-		
 		//'countVisitProfil'
-		public Keyword getCountVisitProfilKeyword_1() { return cCountVisitProfilKeyword_1; }
+		public Keyword getCountVisitProfilKeyword_0() { return cCountVisitProfilKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class CroissanceAbonneElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.CroissanceAbonne");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cCroissanceAbonneAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cCroissanceAbonneKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cCroissanceAbonneKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//CroissanceAbonne:
-		//	{CroissanceAbonne}
 		//	'CroissanceAbonne'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{CroissanceAbonne} 'CroissanceAbonne' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'CroissanceAbonne' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{CroissanceAbonne}
-		public Action getCroissanceAbonneAction_0() { return cCroissanceAbonneAction_0; }
-		
 		//'CroissanceAbonne'
-		public Keyword getCroissanceAbonneKeyword_1() { return cCroissanceAbonneKeyword_1; }
+		public Keyword getCroissanceAbonneKeyword_0() { return cCroissanceAbonneKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class MoyFollowersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.moyFollowers");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cMoyFollowersAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cMoyFollowersKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cMoyFollowersKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//moyFollowers:
-		//	{moyFollowers}
 		//	'moyFollowers'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{moyFollowers} 'moyFollowers' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'moyFollowers' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{moyFollowers}
-		public Action getMoyFollowersAction_0() { return cMoyFollowersAction_0; }
-		
 		//'moyFollowers'
-		public Keyword getMoyFollowersKeyword_1() { return cMoyFollowersKeyword_1; }
+		public Keyword getMoyFollowersKeyword_0() { return cMoyFollowersKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class MoyFavoritedElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.moyFavorited");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cMoyFavoritedAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cMoyFavoritedKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cArgsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cArgsArgsParserRuleCall_3_0_0 = (RuleCall)cArgsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cArgsArgsParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cMoyFavoritedKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cArgsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_0_0 = (RuleCall)cArgsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cArgsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cArgsUtilisationVarParserRuleCall_2_1_1_0 = (RuleCall)cArgsAssignment_2_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//moyFavorited:
-		//	{moyFavorited}
 		//	'moyFavorited'
-		//	'{' (args+=Args ("," args+=Args)*)?
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{moyFavorited} 'moyFavorited' '{' (args+=Args ("," args+=Args)*)? '}'
+		//'moyFavorited' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{moyFavorited}
-		public Action getMoyFavoritedAction_0() { return cMoyFavoritedAction_0; }
-		
 		//'moyFavorited'
-		public Keyword getMoyFavoritedKeyword_1() { return cMoyFavoritedKeyword_1; }
+		public Keyword getMoyFavoritedKeyword_0() { return cMoyFavoritedKeyword_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//(args+=Args ("," args+=Args)*)?
-		public Group getGroup_3() { return cGroup_3; }
+		//(args+=UtilisationVar ("," args+=UtilisationVar)*)
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_0() { return cArgsAssignment_3_0; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_0() { return cArgsAssignment_2_0; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_0_0() { return cArgsArgsParserRuleCall_3_0_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_0_0() { return cArgsUtilisationVarParserRuleCall_2_0_0; }
 		
-		//("," args+=Args)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		//("," args+=UtilisationVar)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 		
-		//args+=Args
-		public Assignment getArgsAssignment_3_1_1() { return cArgsAssignment_3_1_1; }
+		//args+=UtilisationVar
+		public Assignment getArgsAssignment_2_1_1() { return cArgsAssignment_2_1_1; }
 		
-		//Args
-		public RuleCall getArgsArgsParserRuleCall_3_1_1_0() { return cArgsArgsParserRuleCall_3_1_1_0; }
+		//UtilisationVar
+		public RuleCall getArgsUtilisationVarParserRuleCall_2_1_1_0() { return cArgsUtilisationVarParserRuleCall_2_1_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class GREATERElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.GREATER");
@@ -1503,21 +1448,6 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
 	}
-	public class ArgsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.Args");
-		private final Assignment cExpressionAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cExpressionExpressionParserRuleCall_0 = (RuleCall)cExpressionAssignment.eContents().get(0);
-		
-		//Args:
-		//	expression=Expression;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//expression=Expression
-		public Assignment getExpressionAssignment() { return cExpressionAssignment; }
-		
-		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_0() { return cExpressionExpressionParserRuleCall_0; }
-	}
 	public class String0Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "esir3.im.Tw.String0");
 		private final RuleCall cIDTerminalRuleCall = (RuleCall)rule.eContents().get(1);
@@ -1559,7 +1489,6 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	private final StringTwElements pStringTw;
 	private final ADDElements pADD;
 	private final MULElements pMUL;
-	private final ArgsElements pArgs;
 	private final String0Elements pString0;
 	
 	private final Grammar grammar;
@@ -1599,7 +1528,6 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		this.pStringTw = new StringTwElements();
 		this.pADD = new ADDElements();
 		this.pMUL = new MULElements();
-		this.pArgs = new ArgsElements();
 		this.pString0 = new String0Elements();
 	}
 	
@@ -1743,9 +1671,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_user:
-	//	{tweets_user}
 	//	'tweets_user'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public Tweets_userElements getTweets_userAccess() {
 		return pTweets_user;
@@ -1756,9 +1683,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_location:
-	//	{tweets_location}
 	//	'tweets_location'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public Tweets_locationElements getTweets_locationAccess() {
 		return pTweets_location;
@@ -1769,9 +1695,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_entity:
-	//	{tweets_entity}
 	//	'tweets_entity'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public Tweets_entityElements getTweets_entityAccess() {
 		return pTweets_entity;
@@ -1782,9 +1707,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_date:
-	//	{tweets_date}
 	//	'tweets_date'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public Tweets_dateElements getTweets_dateAccess() {
 		return pTweets_date;
@@ -1795,9 +1719,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ProportionPositif:
-	//	{ProportionPositif}
 	//	'ProportionPositif'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public ProportionPositifElements getProportionPositifAccess() {
 		return pProportionPositif;
@@ -1808,9 +1731,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ProportionNegatif:
-	//	{ProportionNegatif}
 	//	'ProportionNegatif'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public ProportionNegatifElements getProportionNegatifAccess() {
 		return pProportionNegatif;
@@ -1821,9 +1743,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//countTweet:
-	//	{countTweet}
 	//	'countTweet'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public CountTweetElements getCountTweetAccess() {
 		return pCountTweet;
@@ -1834,9 +1755,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//countVisitProfil:
-	//	{countVisitProfil}
 	//	'countVisitProfil'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public CountVisitProfilElements getCountVisitProfilAccess() {
 		return pCountVisitProfil;
@@ -1847,9 +1767,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//CroissanceAbonne:
-	//	{CroissanceAbonne}
 	//	'CroissanceAbonne'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public CroissanceAbonneElements getCroissanceAbonneAccess() {
 		return pCroissanceAbonne;
@@ -1860,9 +1779,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//moyFollowers:
-	//	{moyFollowers}
 	//	'moyFollowers'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public MoyFollowersElements getMoyFollowersAccess() {
 		return pMoyFollowers;
@@ -1873,9 +1791,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//moyFavorited:
-	//	{moyFavorited}
 	//	'moyFavorited'
-	//	'{' (args+=Args ("," args+=Args)*)?
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
 	//	'}';
 	public MoyFavoritedElements getMoyFavoritedAccess() {
 		return pMoyFavorited;
@@ -1991,16 +1908,6 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMULRule() {
 		return getMULAccess().getRule();
-	}
-	
-	//Args:
-	//	expression=Expression;
-	public ArgsElements getArgsAccess() {
-		return pArgs;
-	}
-	
-	public ParserRule getArgsRule() {
-		return getArgsAccess().getRule();
 	}
 	
 	//String0:

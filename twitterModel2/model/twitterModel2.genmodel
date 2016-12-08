@@ -26,9 +26,6 @@
     <genClasses ecoreClass="twitterModel2.ecore#//Command">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Command/args"/>
     </genClasses>
-    <genClasses ecoreClass="twitterModel2.ecore#//Args">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference twitterModel2.ecore#//Args/expression"/>
-    </genClasses>
     <genClasses ecoreClass="twitterModel2.ecore#//OpBool"/>
     <genClasses ecoreClass="twitterModel2.ecore#//DeclarationVar">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute twitterModel2.ecore#//DeclarationVar/name"/>

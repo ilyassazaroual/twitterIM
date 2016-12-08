@@ -136,7 +136,7 @@ public class CommandItemProvider extends ExpressionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TwitterModel2Package.Literals.COMMAND__ARGS,
-				 TwitterModel2Factory.eINSTANCE.createArgs()));
+				 TwitterModel2Factory.eINSTANCE.createUtilisationVar()));
 	}
 
 }

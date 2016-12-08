@@ -17,7 +17,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import twitterModel2.ADD;
 import twitterModel2.AND;
-import twitterModel2.Args;
 import twitterModel2.Block;
 import twitterModel2.CroissanceAbonne;
 import twitterModel2.DeclarationVar;
@@ -62,9 +61,6 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case TwitterModel2Package.AND:
 				sequence_AND(context, (AND) semanticObject); 
-				return; 
-			case TwitterModel2Package.ARGS:
-				sequence_Args(context, (Args) semanticObject); 
 				return; 
 			case TwitterModel2Package.BLOCK:
 				sequence_Block(context, (Block) semanticObject); 
@@ -189,24 +185,6 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Args returns Args
-	 *
-	 * Constraint:
-	 *     expression=Expression
-	 */
-	protected void sequence_Args(ISerializationContext context, Args semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TwitterModel2Package.Literals.ARGS__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TwitterModel2Package.Literals.ARGS__EXPRESSION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getArgsAccess().getExpressionExpressionParserRuleCall_0(), semanticObject.getExpression());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Statement returns Block
 	 *     Block returns Block
 	 *
@@ -225,7 +203,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CroissanceAbonne returns CroissanceAbonne
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_CroissanceAbonne(ISerializationContext context, CroissanceAbonne semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -396,7 +374,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ProportionNegatif returns ProportionNegatif
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_ProportionNegatif(ISerializationContext context, ProportionNegatif semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -410,7 +388,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ProportionPositif returns ProportionPositif
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_ProportionPositif(ISerializationContext context, ProportionPositif semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -464,7 +442,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     countTweet returns countTweet
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_countTweet(ISerializationContext context, countTweet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -478,7 +456,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     countVisitProfil returns countVisitProfil
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_countVisitProfil(ISerializationContext context, countVisitProfil semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -492,7 +470,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     moyFavorited returns moyFavorited
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_moyFavorited(ISerializationContext context, moyFavorited semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -506,7 +484,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     moyFollowers returns moyFollowers
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_moyFollowers(ISerializationContext context, moyFollowers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -539,7 +517,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     tweets_date returns tweets_date
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_tweets_date(ISerializationContext context, tweets_date semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -553,7 +531,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     tweets_entity returns tweets_entity
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_tweets_entity(ISerializationContext context, tweets_entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -567,7 +545,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     tweets_location returns tweets_location
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_tweets_location(ISerializationContext context, tweets_location semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -581,7 +559,7 @@ public class TwSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     tweets_user returns tweets_user
 	 *
 	 * Constraint:
-	 *     (args+=Args args+=Args*)?
+	 *     (args+=UtilisationVar args+=UtilisationVar*)
 	 */
 	protected void sequence_tweets_user(ISerializationContext context, tweets_user semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Command extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Args</b></em>' containment reference list.
-	 * The list contents are of type {@link twitterModel2.Args}.
+	 * The list contents are of type {@link twitterModel2.UtilisationVar}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Args</em>' containment reference list isn't clear,
@@ -35,6 +35,6 @@ public interface Command extends Expression {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Args> getArgs();
+	EList<UtilisationVar> getArgs();
 
 } // Command

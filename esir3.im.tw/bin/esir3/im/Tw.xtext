@@ -12,9 +12,7 @@ Program returns Program:
 		(statement+=Statement ( ';' statement+=Statement)*)? 
 	'}';
 
-Statement returns Statement:
-	Block | If | DeclarationVar | AND | OR | tweets_user | tweets_location | tweets_entity | tweets_date | ProportionPositif | ProportionNegatif | countTweet | countVisitProfil | CroissanceAbonne | moyFollowers | moyFavorited | GREATER | LESS | EQUALS | UtilisationVar | print | StringTw | ADD | MUL;
-
+Statement: (Block | If | DeclarationVar | AND | OR | tweets_user | tweets_location | tweets_entity | tweets_date | ProportionPositif | ProportionNegatif | countTweet | countVisitProfil | CroissanceAbonne | moyFollowers | moyFavorited | GREATER | LESS | EQUALS | UtilisationVar | print | StringTw | ADD | MUL);
 
 OpBool returns OpBool:
 	AND | OR | GREATER | LESS | EQUALS;
@@ -31,7 +29,7 @@ Block returns Block:
 
 
 If returns If:
-	'If' '(' condition=OpBool ')'
+	'if' '(' condition=OpBool ')'
 		ifBlock=Block
 		('else' elseBlock=Block)?
 	;
@@ -59,92 +57,71 @@ OR returns OR:
 	')';
 
 tweets_user returns tweets_user:
-	{tweets_user}
 	'tweets_user'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 tweets_location returns tweets_location:
-	{tweets_location}
 	'tweets_location'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 tweets_entity returns tweets_entity:
-	{tweets_entity}
 	'tweets_entity'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 tweets_date returns tweets_date:
-	{tweets_date}
 	'tweets_date'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 ProportionPositif returns ProportionPositif:
-	{ProportionPositif}
 	'ProportionPositif'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 ProportionNegatif returns ProportionNegatif:
-	{ProportionNegatif}
 	'ProportionNegatif'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 countTweet returns countTweet:
-	{countTweet}
 	'countTweet'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 countVisitProfil returns countVisitProfil:
-	{countVisitProfil}
 	'countVisitProfil'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 CroissanceAbonne returns CroissanceAbonne:
-	{CroissanceAbonne}
 	'CroissanceAbonne'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 moyFollowers returns moyFollowers:
-	{moyFollowers}
 	'moyFollowers'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
 
 moyFavorited returns moyFavorited:
-	{moyFavorited}
 	'moyFavorited'
 	'{'
-		(args+=Args ( "," args+=Args)*)?
-	'}'
-	;
+		(args+=UtilisationVar ( "," args+=UtilisationVar)*) 
+	'}';
+
 	
 GREATER returns GREATER:
 	'GREATER'
@@ -200,9 +177,6 @@ MUL returns MUL:
 		exp2=Expression
 	')';
 
-Args returns Args:
-		 expression=Expression
-	;
-
 String0 :
 	ID;
+	// TODO: implement this rule and an appropriate IValueConverter */;

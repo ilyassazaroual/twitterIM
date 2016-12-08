@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
-import twitterModel2.Args;
 import twitterModel2.Block;
 import twitterModel2.Command;
 import twitterModel2.CommandStat;
@@ -95,13 +94,6 @@ public class TwitterModel2PackageImpl extends EPackageImpl implements TwitterMod
 	 * @generated
 	 */
 	private EClass commandEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass argsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -482,24 +474,6 @@ public class TwitterModel2PackageImpl extends EPackageImpl implements TwitterMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getArgs() {
-		return argsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getArgs_Expression() {
-		return (EReference)argsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOpBool() {
 		return opBoolEClass;
 	}
@@ -815,9 +789,6 @@ public class TwitterModel2PackageImpl extends EPackageImpl implements TwitterMod
 		commandEClass = createEClass(COMMAND);
 		createEReference(commandEClass, COMMAND__ARGS);
 
-		argsEClass = createEClass(ARGS);
-		createEReference(argsEClass, ARGS__EXPRESSION);
-
 		opBoolEClass = createEClass(OP_BOOL);
 
 		declarationVarEClass = createEClass(DECLARATION_VAR);
@@ -957,10 +928,7 @@ public class TwitterModel2PackageImpl extends EPackageImpl implements TwitterMod
 		initEReference(getExpBinaire_Exp2(), this.getExpression(), null, "exp2", null, 1, 1, ExpBinaire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(commandEClass, Command.class, "Command", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCommand_Args(), this.getArgs(), null, "args", null, 1, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(argsEClass, Args.class, "Args", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArgs_Expression(), this.getExpression(), null, "expression", null, 1, 1, Args.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCommand_Args(), this.getUtilisationVar(), null, "args", null, 1, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(opBoolEClass, OpBool.class, "OpBool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

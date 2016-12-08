@@ -96,10 +96,6 @@ public class TwitterModel2AdapterFactory extends AdapterFactoryImpl {
 				return createCommandAdapter();
 			}
 			@Override
-			public Adapter caseArgs(Args object) {
-				return createArgsAdapter();
-			}
-			@Override
 			public Adapter caseOpBool(OpBool object) {
 				return createOpBoolAdapter();
 			}
@@ -314,20 +310,6 @@ public class TwitterModel2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCommandAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link twitterModel2.Args <em>Args</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see twitterModel2.Args
-	 * @generated
-	 */
-	public Adapter createArgsAdapter() {
 		return null;
 	}
 

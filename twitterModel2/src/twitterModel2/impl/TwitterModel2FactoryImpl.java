@@ -59,7 +59,6 @@ public class TwitterModel2FactoryImpl extends EFactoryImpl implements TwitterMod
 			case TwitterModel2Package.PROGRAM: return createProgram();
 			case TwitterModel2Package.BLOCK: return createBlock();
 			case TwitterModel2Package.IF: return createIf();
-			case TwitterModel2Package.ARGS: return createArgs();
 			case TwitterModel2Package.DECLARATION_VAR: return createDeclarationVar();
 			case TwitterModel2Package.AND: return createAND();
 			case TwitterModel2Package.OR: return createOR();
@@ -115,16 +114,6 @@ public class TwitterModel2FactoryImpl extends EFactoryImpl implements TwitterMod
 	public If createIf() {
 		IfImpl if_ = new IfImpl();
 		return if_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Args createArgs() {
-		ArgsImpl args = new ArgsImpl();
-		return args;
 	}
 
 	/**
