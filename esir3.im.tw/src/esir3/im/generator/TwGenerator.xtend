@@ -39,11 +39,42 @@ class TwGenerator extends AbstractGenerator {
 	/*def Visiteur getVisiteurCodeJava(){
 		return new VisiteurCodeJava(new TabSymbole());
 	}*/
+	
+	def ordonnerInstruction(String code){
+		var int taille = code.length();
+		var String str ="";
+		var String lastInstruction ="";
+		if(code.charAt(taille-2)=='='){
+			var int ind2 = code.lastIndexOf('\n');
+			 str = code.substring(0, ind2+1);
+			 lastInstruction = code.substring(ind2, taille);
+		}
+	}
+	
 	def compile(Program p) {
 		var VisiteurCodeJava v = new VisiteurCodeJava(new TabSymbole());
 		var String res = p.accepteVisiteur(v)+"\n";
 		for(Statement st : p.statement){
-			res+=st.accepteVisiteur(v)+"\n";
+			if (st.accepteVisiteur(v).contains("(new LibTw())")) {
+			System.out.println("================code3@================\n");
+				var int taille = res.length();
+				var String str ="";
+				var String lastInstruction ="";
+				System.out.println("******"+res.charAt(taille-1)+"#"+res.charAt(taille-2)+"\n"+res+st.accepteVisiteur(v));
+				if(res.charAt(taille-1)=='='){
+					System.out.println("===============OK================\n");
+					var int ind2 = res.lastIndexOf('\n');
+					 str = res.substring(0, ind2+1);
+					 lastInstruction = res.substring(ind2, taille);
+					 var String tmp = st.accepteVisiteur(v);
+					 var int deb = tmp.lastIndexOf('\n');
+					 var String declareParam = tmp.substring(0,deb);
+					 var String tmpLastInst = tmp.substring(deb,tmp.length);
+					 res = str+declareParam+lastInstruction+tmpLastInst+"\n";
+				}
+				else res+=st.accepteVisiteur(v)+"\n";
+			}
+			else res+=st.accepteVisiteur(v)+"\n";
 		}
 		v.tabSymbole.afficher;
 		return res;

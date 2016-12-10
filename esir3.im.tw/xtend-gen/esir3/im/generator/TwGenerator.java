@@ -3,6 +3,7 @@
  */
 package esir3.im.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.io.File;
 import org.eclipse.emf.common.util.EList;
@@ -51,6 +52,31 @@ public class TwGenerator extends AbstractGenerator {
    * return new VisiteurCodeJava(new TabSymbole());
    * }
    */
+  public String ordonnerInstruction(final String code) {
+    String _xblockexpression = null;
+    {
+      int taille = code.length();
+      String str = "";
+      String lastInstruction = "";
+      String _xifexpression = null;
+      char _charAt = code.charAt((taille - 2));
+      boolean _equals = Objects.equal(Character.valueOf(_charAt), "=");
+      if (_equals) {
+        String _xblockexpression_1 = null;
+        {
+          int ind2 = code.lastIndexOf("\n");
+          String _substring = code.substring(0, (ind2 + 1));
+          str = _substring;
+          String _substring_1 = code.substring(ind2, taille);
+          _xblockexpression_1 = lastInstruction = _substring_1;
+        }
+        _xifexpression = _xblockexpression_1;
+      }
+      _xblockexpression = _xifexpression;
+    }
+    return _xblockexpression;
+  }
+  
   public String compile(final Program p) {
     TabSymbole _tabSymbole = new TabSymbole();
     VisiteurCodeJava v = new VisiteurCodeJava(_tabSymbole);
@@ -58,10 +84,50 @@ public class TwGenerator extends AbstractGenerator {
     String res = (_accepteVisiteur + "\n");
     EList<Statement> _statement = p.getStatement();
     for (final Statement st : _statement) {
-      String _res = res;
       String _accepteVisiteur_1 = st.accepteVisiteur(v);
-      String _plus = (_accepteVisiteur_1 + "\n");
-      res = (_res + _plus);
+      boolean _contains = _accepteVisiteur_1.contains("(new LibTw())");
+      if (_contains) {
+        System.out.println("================code3@================\n");
+        int taille = res.length();
+        String str = "";
+        String lastInstruction = "";
+        char _charAt = res.charAt((taille - 1));
+        String _plus = ("******" + Character.valueOf(_charAt));
+        String _plus_1 = (_plus + "#");
+        char _charAt_1 = res.charAt((taille - 2));
+        String _plus_2 = (_plus_1 + Character.valueOf(_charAt_1));
+        String _plus_3 = (_plus_2 + "\n");
+        String _plus_4 = (_plus_3 + res);
+        String _accepteVisiteur_2 = st.accepteVisiteur(v);
+        String _plus_5 = (_plus_4 + _accepteVisiteur_2);
+        System.out.println(_plus_5);
+        char _charAt_2 = res.charAt((taille - 1));
+        boolean _equals = Objects.equal(Character.valueOf(_charAt_2), "=");
+        if (_equals) {
+          System.out.println("===============OK================\n");
+          int ind2 = res.lastIndexOf("\n");
+          String _substring = res.substring(0, (ind2 + 1));
+          str = _substring;
+          String _substring_1 = res.substring(ind2, taille);
+          lastInstruction = _substring_1;
+          String tmp = st.accepteVisiteur(v);
+          int deb = tmp.lastIndexOf("\n");
+          String declareParam = tmp.substring(0, deb);
+          int _length = tmp.length();
+          String tmpLastInst = tmp.substring(deb, _length);
+          res = ((((str + declareParam) + lastInstruction) + tmpLastInst) + "\n");
+        } else {
+          String _res = res;
+          String _accepteVisiteur_3 = st.accepteVisiteur(v);
+          String _plus_6 = (_accepteVisiteur_3 + "\n");
+          res = (_res + _plus_6);
+        }
+      } else {
+        String _res_1 = res;
+        String _accepteVisiteur_4 = st.accepteVisiteur(v);
+        String _plus_7 = (_accepteVisiteur_4 + "\n");
+        res = (_res_1 + _plus_7);
+      }
     }
     TabSymbole _tabSymbole_1 = v.getTabSymbole();
     _tabSymbole_1.afficher();

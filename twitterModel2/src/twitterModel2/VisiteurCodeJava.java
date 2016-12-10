@@ -39,7 +39,7 @@ public class VisiteurCodeJava extends Visiteur {
 		this.tabSymbole = tabSymbole;
 		this.cptParams = 0;
 	}
-	
+
 
 	public TabSymbole getTabSymbole() {
 		return tabSymbole;
@@ -66,9 +66,9 @@ public class VisiteurCodeJava extends Visiteur {
 		String res = "public class MainClass {\n"+
 				"public static void main(String[] args) {\n";
 		//A faire : déclaarer les variables***************!!!!!!
-//		for(String s : tabSymbole.getTabSymb()){
-//			res += "String "+s+"= new String();\n";
-//		}
+		//		for(String s : tabSymbole.getTabSymb()){
+		//			res += "String "+s+"= new String();\n";
+		//		}
 		return res;
 	}
 
@@ -81,7 +81,7 @@ public class VisiteurCodeJava extends Visiteur {
 
 	@Override
 	public String visite(If i) {
-		String res = "if("+visite(i.getCondition())+")\n"+visite(i.getIfBlock())+visite(i.getElseBlock());
+		String res = "if("+visite(i.getCondition())+")\n"+visite(i.getIfBlock())+"\nelse"+visite(i.getElseBlock());
 		return res;
 	}
 
@@ -97,7 +97,10 @@ public class VisiteurCodeJava extends Visiteur {
 		if(this.tabSymbole.addVariable(decVar.getName())){
 			res+="String "+decVar.getName()+" = new String();\n";
 		}
-		 res += decVar.getName()+"="+visite(decVar.getOpDroite())+";";
+		if(decVar.getOpDroite() instanceof Command){
+			return visite((Command) decVar.getOpDroite(),decVar.getName());
+		}
+		res += decVar.getName()+"="+visite(decVar.getOpDroite())+";";
 		return res;
 	}
 
@@ -122,7 +125,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getUser("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getUser("+listName+");";	
 		return res;
 	}
 
@@ -135,7 +138,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getLocation("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getLocation("+listName+");";	
 		return res;
 	}
 
@@ -148,7 +151,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getEntity("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getEntity("+listName+");";	
 		return res;
 	}
 
@@ -161,7 +164,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getDate("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getDate("+listName+");";	
 		return res;
 	}
 
@@ -174,7 +177,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getProportionPositif"+listName+");\n";	
+		String res =declar+ "(new LibTw()).getProportionPositif"+listName+");";	
 		return res;
 	}
 
@@ -187,7 +190,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getProportionNegatif("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getProportionNegatif("+listName+");";	
 		return res;
 	}
 
@@ -200,7 +203,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getCountTweet("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getCountTweet("+listName+");";	
 		return res;
 	}
 
@@ -213,7 +216,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getCountVisitProfil("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getCountVisitProfil("+listName+");";	
 		return res;
 	}
 
@@ -226,7 +229,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getCroissanceAbonne("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getCroissanceAbonne("+listName+");";	
 		return res;
 	}
 
@@ -239,7 +242,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getMoyenFollowers("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getMoyenFollowers("+listName+");";	
 		return res;
 	}
 
@@ -252,7 +255,7 @@ public class VisiteurCodeJava extends Visiteur {
 			String varName = arg.getNameVar().getName();
 			declar+=listName+".add("+varName+");\n";
 		}
-		String res =declar+ "(new LibTw()).getMoyFavorited("+listName+");\n";	
+		String res =declar+ "(new LibTw()).getMoyFavorited("+listName+");";	
 		return res;
 	}
 
@@ -300,7 +303,7 @@ public class VisiteurCodeJava extends Visiteur {
 	public String visite(Block b) {
 		String res = "{";
 		for(Statement st : b.getStatement()){
-			res+=visite(st)+";";
+			res+=visite(st)+"\n";
 		}
 		res+="}";
 		return res ;
@@ -313,7 +316,17 @@ public class VisiteurCodeJava extends Visiteur {
 
 	@Override
 	public String visite(Statement st) {
-		return "statement";
+		return st.accepteVisiteur(this);
+	}
+
+	String visite(Command c, String var){
+		String res="";
+		String tmp = this.visite(c);
+		int deb = tmp.lastIndexOf('\n');
+		String declareParam = tmp.substring(0,deb);
+		String tmpLastInst = tmp.substring(deb+1,tmp.length());
+		res = declareParam+"\n"+var+"="+tmpLastInst+"\n";
+		return res;
 	}
 
 }

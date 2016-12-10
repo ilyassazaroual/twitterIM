@@ -40,7 +40,10 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Program:
-		//	{Program} 'Program' '{' (statement+=Statement (';' statement+=Statement)*)? '}';
+		//	{Program}
+		//	'Program'
+		//	'{' (statement+=Statement (';' statement+=Statement)*)?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Program} 'Program' '{' (statement+=Statement (';' statement+=Statement)*)? '}'
@@ -331,7 +334,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Block:
-		//	{Block} '{' (statement+=Statement (";" statement+=Statement)*)? '}';
+		//	{Block}
+		//	'{' (statement+=Statement (";" statement+=Statement)*)?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Block} '{' (statement+=Statement (";" statement+=Statement)*)? '}'
@@ -383,7 +388,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cElseBlockBlockParserRuleCall_5_1_0 = (RuleCall)cElseBlockAssignment_5_1.eContents().get(0);
 		
 		//If:
-		//	'if' '(' condition=OpBool ')' ifBlock=Block ('else' elseBlock=Block)?;
+		//	'if' '(' condition=OpBool ')'
+		//	ifBlock=Block ('else' elseBlock=Block)?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'if' '(' condition=OpBool ')' ifBlock=Block ('else' elseBlock=Block)?
@@ -432,7 +438,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOpDroiteExpressionParserRuleCall_2_0 = (RuleCall)cOpDroiteAssignment_2.eContents().get(0);
 		
 		//DeclarationVar:
-		//	name=String0? ':=' opDroite=Expression;
+		//	name=String0?
+		//	':='
+		//	opDroite=Expression;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//name=String0? ':=' opDroite=Expression
@@ -466,7 +474,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//AND:
-		//	'AND' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'AND'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'AND' '(' exp1=Expression ',' exp2=Expression ')'
@@ -509,7 +522,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//OR:
-		//	'OR' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'OR'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'OR' '(' exp1=Expression ',' exp2=Expression ')'
@@ -554,7 +572,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_user:
-		//	'tweets_user' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'tweets_user'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'tweets_user' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -605,7 +625,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_location:
-		//	'tweets_location' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'tweets_location'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'tweets_location' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -656,7 +678,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_entity:
-		//	'tweets_entity' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'tweets_entity'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'tweets_entity' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -707,7 +731,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//tweets_date:
-		//	'tweets_date' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'tweets_date'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'tweets_date' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -758,7 +784,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ProportionPositif:
-		//	'ProportionPositif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'ProportionPositif'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ProportionPositif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -809,7 +837,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ProportionNegatif:
-		//	'ProportionNegatif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'ProportionNegatif'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ProportionNegatif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -860,7 +890,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//countTweet:
-		//	'countTweet' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'countTweet'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'countTweet' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -911,7 +943,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//countVisitProfil:
-		//	'countVisitProfil' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'countVisitProfil'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'countVisitProfil' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -962,7 +996,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//CroissanceAbonne:
-		//	'CroissanceAbonne' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'CroissanceAbonne'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'CroissanceAbonne' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -1013,7 +1049,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//moyFollowers:
-		//	'moyFollowers' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'moyFollowers'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'moyFollowers' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -1064,7 +1102,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//moyFavorited:
-		//	'moyFavorited' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+		//	'moyFavorited'
+		//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'moyFavorited' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}'
@@ -1113,7 +1153,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GREATER:
-		//	'GREATER' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'GREATER'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GREATER' '(' exp1=Expression ',' exp2=Expression ')'
@@ -1156,7 +1201,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//LESS:
-		//	'LESS' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'LESS'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'LESS' '(' exp1=Expression ',' exp2=Expression ')'
@@ -1199,7 +1249,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//EQUALS:
-		//	'EQUALS' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'EQUALS'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'EQUALS' '(' exp1=Expression ',' exp2=Expression ')'
@@ -1258,7 +1313,10 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//print:
-		//	'print' '(' expression=Expression ')';
+		//	'print'
+		//	'('
+		//	expression=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'print' '(' expression=Expression ')'
@@ -1307,7 +1365,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//ADD:
-		//	'ADD' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'ADD'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ADD' '(' exp1=Expression ',' exp2=Expression ')'
@@ -1350,7 +1413,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//MUL:
-		//	'MUL' '(' exp1=Expression ',' exp2=Expression ')';
+		//	'MUL'
+		//	'('
+		//	exp1=Expression
+		//	','
+		//	exp2=Expression
+		//	')';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'MUL' '(' exp1=Expression ',' exp2=Expression ')'
@@ -1491,7 +1559,10 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Program:
-	//	{Program} 'Program' '{' (statement+=Statement (';' statement+=Statement)*)? '}';
+	//	{Program}
+	//	'Program'
+	//	'{' (statement+=Statement (';' statement+=Statement)*)?
+	//	'}';
 	public ProgramElements getProgramAccess() {
 		return pProgram;
 	}
@@ -1535,7 +1606,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Block:
-	//	{Block} '{' (statement+=Statement (";" statement+=Statement)*)? '}';
+	//	{Block}
+	//	'{' (statement+=Statement (";" statement+=Statement)*)?
+	//	'}';
 	public BlockElements getBlockAccess() {
 		return pBlock;
 	}
@@ -1545,7 +1618,8 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//If:
-	//	'if' '(' condition=OpBool ')' ifBlock=Block ('else' elseBlock=Block)?;
+	//	'if' '(' condition=OpBool ')'
+	//	ifBlock=Block ('else' elseBlock=Block)?;
 	public IfElements getIfAccess() {
 		return pIf;
 	}
@@ -1555,7 +1629,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DeclarationVar:
-	//	name=String0? ':=' opDroite=Expression;
+	//	name=String0?
+	//	':='
+	//	opDroite=Expression;
 	public DeclarationVarElements getDeclarationVarAccess() {
 		return pDeclarationVar;
 	}
@@ -1565,7 +1641,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AND:
-	//	'AND' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'AND'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public ANDElements getANDAccess() {
 		return pAND;
 	}
@@ -1575,7 +1656,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//OR:
-	//	'OR' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'OR'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public ORElements getORAccess() {
 		return pOR;
 	}
@@ -1585,7 +1671,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_user:
-	//	'tweets_user' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'tweets_user'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public Tweets_userElements getTweets_userAccess() {
 		return pTweets_user;
 	}
@@ -1595,7 +1683,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_location:
-	//	'tweets_location' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'tweets_location'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public Tweets_locationElements getTweets_locationAccess() {
 		return pTweets_location;
 	}
@@ -1605,7 +1695,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_entity:
-	//	'tweets_entity' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'tweets_entity'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public Tweets_entityElements getTweets_entityAccess() {
 		return pTweets_entity;
 	}
@@ -1615,7 +1707,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//tweets_date:
-	//	'tweets_date' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'tweets_date'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public Tweets_dateElements getTweets_dateAccess() {
 		return pTweets_date;
 	}
@@ -1625,7 +1719,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ProportionPositif:
-	//	'ProportionPositif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'ProportionPositif'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public ProportionPositifElements getProportionPositifAccess() {
 		return pProportionPositif;
 	}
@@ -1635,7 +1731,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ProportionNegatif:
-	//	'ProportionNegatif' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'ProportionNegatif'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public ProportionNegatifElements getProportionNegatifAccess() {
 		return pProportionNegatif;
 	}
@@ -1645,7 +1743,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//countTweet:
-	//	'countTweet' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'countTweet'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public CountTweetElements getCountTweetAccess() {
 		return pCountTweet;
 	}
@@ -1655,7 +1755,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//countVisitProfil:
-	//	'countVisitProfil' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'countVisitProfil'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public CountVisitProfilElements getCountVisitProfilAccess() {
 		return pCountVisitProfil;
 	}
@@ -1665,7 +1767,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//CroissanceAbonne:
-	//	'CroissanceAbonne' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'CroissanceAbonne'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public CroissanceAbonneElements getCroissanceAbonneAccess() {
 		return pCroissanceAbonne;
 	}
@@ -1675,7 +1779,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//moyFollowers:
-	//	'moyFollowers' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'moyFollowers'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public MoyFollowersElements getMoyFollowersAccess() {
 		return pMoyFollowers;
 	}
@@ -1685,7 +1791,9 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//moyFavorited:
-	//	'moyFavorited' '{' (args+=UtilisationVar ("," args+=UtilisationVar)*) '}';
+	//	'moyFavorited'
+	//	'{' (args+=UtilisationVar ("," args+=UtilisationVar)*)
+	//	'}';
 	public MoyFavoritedElements getMoyFavoritedAccess() {
 		return pMoyFavorited;
 	}
@@ -1695,7 +1803,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GREATER:
-	//	'GREATER' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'GREATER'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public GREATERElements getGREATERAccess() {
 		return pGREATER;
 	}
@@ -1705,7 +1818,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//LESS:
-	//	'LESS' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'LESS'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public LESSElements getLESSAccess() {
 		return pLESS;
 	}
@@ -1715,7 +1833,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//EQUALS:
-	//	'EQUALS' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'EQUALS'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public EQUALSElements getEQUALSAccess() {
 		return pEQUALS;
 	}
@@ -1735,7 +1858,10 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//print:
-	//	'print' '(' expression=Expression ')';
+	//	'print'
+	//	'('
+	//	expression=Expression
+	//	')';
 	public PrintElements getPrintAccess() {
 		return pPrint;
 	}
@@ -1755,7 +1881,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ADD:
-	//	'ADD' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'ADD'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public ADDElements getADDAccess() {
 		return pADD;
 	}
@@ -1765,7 +1896,12 @@ public class TwGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MUL:
-	//	'MUL' '(' exp1=Expression ',' exp2=Expression ')';
+	//	'MUL'
+	//	'('
+	//	exp1=Expression
+	//	','
+	//	exp2=Expression
+	//	')';
 	public MULElements getMULAccess() {
 		return pMUL;
 	}
