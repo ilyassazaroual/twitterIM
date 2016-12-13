@@ -3,3 +3,9 @@ twitterModel2/META-INF/*
 twitterModel2/.classpath
 twitterModel/bin/*
 twitterModel/META-INF/*
+/target/*
+/target/
+.classpath
+.project
+.settings
+twitter4j.properties
